@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    min-height: 2500px;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -13,5 +17,39 @@
     .header__image {
         width: 96%;
         height: 96%;
+    }
+}
+
+.navBar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    background-color: #b7a735;
+    .navBar__desktop {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "nosotros integrantes shows contacto";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        #quienesSomos {
+            grid-area: "nosotros";
+        }
+        #integrantes {
+            grid-area: "shows";
+        }
+        #contacto {
+            grid-area: "contacto";
+        }
     }
 }

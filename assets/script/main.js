@@ -1,24 +1,15 @@
-window.addEventListener('load', () => {
+//scroll
+var controller = new ScrollMagic.Controller();
+//tiempo
+var parallaxTl = new TimelineMax();
+parallaxTl.from('.content-wrapper', 1, { autoAlpha: 0.5, ease: Power0.easeNone }).from('.bcg', 1, { y: '-20%', ease: Power0.easeNone }, 0);
 
-    var quienesSomos = document.querySelector(".parallax"); {
-        window.addEventListener('scroll', throttle(parallax, 1));
 
-        function throttle(fn, wait) {
-            let time = Date.now();
-            return function() {
-                if ((time + wait - Date.now()) < 0) {
-                    fn();
-                    time = Date.now();
-                }
-            }
-        };
+var scenep = new ScrollMagic.Scene({
+        triggerElement: '.bcg-parallax',
+        duration: '100%',
+        triggerHook: 0.9
+    })
+    .setTween(parallaxTl)
 
-        function parallax() {
-            let scrolled = window.pageYOffset;
-            // cambiar la velocidad en 1
-            let coords = (scrolled * 1) + 'px'
-            quienesSomos.style.transform = 'translateY(' + coords + ')';
-        };
-    }
-
-});
+.addTo(controller)

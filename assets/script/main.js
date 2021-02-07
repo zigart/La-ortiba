@@ -14,7 +14,7 @@ parallaxT2.from('.bcg2', 1, { y: '-50%', ease: Power0.easeNone }, 0);
 var scene1 = new ScrollMagic.Scene({
     triggerElement: '.parallaxQuienesSomos',
     duration: '190%',
-    triggerHook: 0.9
+    triggerHook: 1
 })
 
 .setTween(parallaxT1)
@@ -25,7 +25,7 @@ var scene1 = new ScrollMagic.Scene({
 var scene2 = new ScrollMagic.Scene({
         triggerElement: '.parallaxIntegrantes',
         duration: '140%',
-        triggerHook: 0.9
+        triggerHook: 2
     }).setTween(parallaxT2)
     .addIndicators()
     .addTo(controller)

@@ -58,7 +58,7 @@ body {
 
 main {
     .quienesSomos {
-        .bcg-parallax {
+        .parallaxQuienesSomos {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -68,7 +68,7 @@ main {
             background-color: #000;
             overflow: hidden;
             position: relative;
-            .bcg {
+            .bcg1 {
                 background: url("/assets/img/foto.jpg");
                 background-position: center;
                 background-size: cover;
@@ -98,9 +98,58 @@ main {
             }
         }
         .quienesSomos__descripcion {
-            height: 100vh;
+            display: flex;
+            line-height: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 200px;
+            padding: 30px;
+            font-size: 25px;
             color: wheat;
-            background-color: black;
+            background-color: #3a090a;
+        }
+    }
+    .integrantes {
+        .parallaxIntegrantes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            padding: 150px 0;
+            color: rgb(255, 243, 220);
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            .bcg2 {
+                background: url("/assets/img/foto2.jpg");
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                filter: brightness(65%) blur(2px);
+                width: 100%;
+                height: 150%;
+                top: 0;
+                z-index: 1;
+                opacity: 1;
+            }
+            .content-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                max-width: 1140px;
+                position: relative;
+                font-size: 80px;
+                z-index: 2;
+                h2 {
+                    display: flex;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
         }
     }
 }

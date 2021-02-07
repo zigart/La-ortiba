@@ -38,7 +38,11 @@ body {
     text-align: center; }
     .navBar .navBar__desktop a {
       color: white;
-      text-decoration: none; }
+      text-decoration: none;
+      transition: 350ms;
+      font-weight: 800; }
+      .navBar .navBar__desktop a:hover {
+        color: #3a090a; }
     .navBar .navBar__desktop #quienesSomos {
       grid-area: "nosotros"; }
     .navBar .navBar__desktop #integrantes {
@@ -93,7 +97,9 @@ main .quienesSomos .quienesSomos__descripcion {
   padding: 30px;
   font-size: 25px;
   color: wheat;
-  background-color: #3a090a; }
+  background-color: #3a090a;
+  border-top: 4px double wheat;
+  border-bottom: 4px double wheat; }
 
 main .integrantes .parallaxIntegrantes {
   display: flex;
@@ -130,3 +136,35 @@ main .integrantes .parallaxIntegrantes {
       display: flex;
       align-self: center;
       justify-self: center; }
+
+main .integrantes .integrantes__descripcion {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  min-height: 500px;
+  background-color: #3a090a; }
+  main .integrantes .integrantes__descripcion .owl-item {
+    display: flex;
+    justify-content: center; }
+  main .integrantes .integrantes__descripcion .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 400px;
+    background-color: wheat;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0;
+    border: 2px double #3a090a; }
+    main .integrantes .integrantes__descripcion .card img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%; }
+    main .integrantes .integrantes__descripcion .card .nombre {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800; }
+    main .integrantes .integrantes__descripcion .card .descripcion {
+      text-align: center; }

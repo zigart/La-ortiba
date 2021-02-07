@@ -24,8 +24,16 @@ var scene1 = new ScrollMagic.Scene({
 
 var scene2 = new ScrollMagic.Scene({
         triggerElement: '.parallaxIntegrantes',
-        duration: '140%',
+        duration: '170%',
         triggerHook: 2
     }).setTween(parallaxT2)
     .addIndicators()
     .addTo(controller)
+
+
+$(document).ready(function() {
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0
+    });
+});

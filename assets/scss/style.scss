@@ -163,7 +163,7 @@ main {
             display: flex;
             justify-items: center;
             align-items: center;
-            min-height: 500px;
+            min-height: 700px;
             background-color: $bordo;
             .owl-item {
                 display: flex;
@@ -174,8 +174,8 @@ main {
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-                width: 80%;
-                height: 400px;
+                width: 85%;
+                height: 600px;
                 background-color: wheat;
                 overflow: hidden;
                 padding: 20px;
@@ -193,6 +193,18 @@ main {
                 }
                 .descripcion {
                     text-align: center;
+                }
+            }
+            .card--1,
+            .card--2,
+            .card--3,
+            .card--4,
+            .card--5,
+            .card--6 {
+                transition: 1s;
+                &:hover {
+                    width: 90%;
+                    height: 620px;
                 }
             }
         }

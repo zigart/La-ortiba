@@ -34,6 +34,7 @@ var scene2 = new ScrollMagic.Scene({
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
         loop: true,
-        margin: 0
+        autoplay: true,
+        autoplayTimeout: 10000,
     });
 });

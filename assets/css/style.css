@@ -141,7 +141,7 @@ main .integrantes .integrantes__descripcion {
   display: flex;
   justify-items: center;
   align-items: center;
-  min-height: 500px;
+  min-height: 700px;
   background-color: #3a090a; }
   main .integrantes .integrantes__descripcion .owl-item {
     display: flex;
@@ -151,8 +151,8 @@ main .integrantes .integrantes__descripcion {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
-    height: 400px;
+    width: 85%;
+    height: 600px;
     background-color: wheat;
     overflow: hidden;
     padding: 20px;
@@ -168,3 +168,18 @@ main .integrantes .integrantes__descripcion {
       font-weight: 800; }
     main .integrantes .integrantes__descripcion .card .descripcion {
       text-align: center; }
+  main .integrantes .integrantes__descripcion .card--1,
+  main .integrantes .integrantes__descripcion .card--2,
+  main .integrantes .integrantes__descripcion .card--3,
+  main .integrantes .integrantes__descripcion .card--4,
+  main .integrantes .integrantes__descripcion .card--5,
+  main .integrantes .integrantes__descripcion .card--6 {
+    transition: 1s; }
+    main .integrantes .integrantes__descripcion .card--1:hover,
+    main .integrantes .integrantes__descripcion .card--2:hover,
+    main .integrantes .integrantes__descripcion .card--3:hover,
+    main .integrantes .integrantes__descripcion .card--4:hover,
+    main .integrantes .integrantes__descripcion .card--5:hover,
+    main .integrantes .integrantes__descripcion .card--6:hover {
+      width: 90%;
+      height: 620px; }

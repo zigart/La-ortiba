@@ -9,6 +9,9 @@ parallaxT1.from('.bcg1', 1, { y: '-50%', ease: Power0.easeNone }, 0);
 var parallaxT2 = new TimelineMax();
 parallaxT2.from('.bcg2', 1, { y: '-50%', ease: Power0.easeNone }, 0);
 
+var parallaxT3 = new TimelineMax();
+parallaxT3.from('.bcg3', 1, { y: '-50%', ease: Power0.easeNone }, 0);
+
 
 //escenas
 var scene1 = new ScrollMagic.Scene({
@@ -30,7 +33,13 @@ var scene2 = new ScrollMagic.Scene({
     .addIndicators()
     .addTo(controller)
 
-
+var scene3 = new ScrollMagic.Scene({
+        triggerElement: '.parallaxShows',
+        duration: '170%',
+        triggerHook: 2
+    }).setTween(parallaxT3)
+    .addIndicators()
+    .addTo(controller)
 
 $(document).ready(function() {
 

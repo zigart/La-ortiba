@@ -201,3 +201,39 @@ main .integrantes .integrantes__descripcion {
     cursor: pointer; }
   main .integrantes .integrantes__descripcion .owl-dots {
     display: none; }
+
+main .shows .parallaxShows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  padding: 150px 0;
+  color: #fff3dc;
+  background-color: #000;
+  overflow: hidden;
+  position: relative; }
+  main .shows .parallaxShows .bcg3 {
+    background: url("/assets/img/tango.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    filter: brightness(65%) blur(2px);
+    width: 100%;
+    height: 150%;
+    top: 0;
+    z-index: 1;
+    opacity: 1; }
+  main .shows .parallaxShows .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    max-width: 1140px;
+    position: relative;
+    font-size: 80px;
+    z-index: 2; }
+    main .shows .parallaxShows .content-wrapper h2 {
+      display: flex;
+      align-self: center;
+      justify-self: center; }

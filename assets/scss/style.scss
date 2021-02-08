@@ -230,4 +230,45 @@ main {
             }
         }
     }
+    .shows {
+        .parallaxShows {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            padding: 150px 0;
+            color: rgb(255, 243, 220);
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            .bcg3 {
+                background: url("/assets/img/tango.jpg");
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                filter: brightness(65%) blur(2px);
+                width: 100%;
+                height: 150%;
+                top: 0;
+                z-index: 1;
+                opacity: 1;
+            }
+            .content-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                max-width: 1140px;
+                position: relative;
+                font-size: 80px;
+                z-index: 2;
+                h2 {
+                    display: flex;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+        }
+    }
 }

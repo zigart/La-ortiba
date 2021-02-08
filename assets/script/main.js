@@ -31,10 +31,22 @@ var scene2 = new ScrollMagic.Scene({
     .addTo(controller)
 
 
+
 $(document).ready(function() {
-    $(".owl-carousel").owlCarousel({
+
+    var owl = $('.owl-carousel');
+
+
+    owl.owlCarousel({
         loop: true,
-        autoplay: true,
-        autoplayTimeout: 10000,
+        items: 2,
+
     });
-});
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel', [500]);
+    })
+
+    $('.customPrevBtn').click(function() {
+        owl.trigger('prev.owl.carousel', [500]);
+    })
+})

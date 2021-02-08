@@ -252,3 +252,102 @@ main .shows .shows__descripcion {
   border-top: 4px double wheat;
   border-bottom: 4px double wheat;
   background-color: #3a090a; }
+
+main .contacto .parallaxContacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  padding: 150px 0;
+  color: #fff3dc;
+  background-color: #000;
+  overflow: hidden;
+  position: relative; }
+  main .contacto .parallaxContacto .bcg4 {
+    background: url("/assets/img/piano.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    filter: brightness(65%) blur(2px);
+    width: 100%;
+    height: 150%;
+    top: 0;
+    z-index: 1;
+    opacity: 1; }
+  main .contacto .parallaxContacto .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    max-width: 1140px;
+    position: relative;
+    font-size: 80px;
+    z-index: 2; }
+    main .contacto .parallaxContacto .content-wrapper h2 {
+      display: flex;
+      align-self: center;
+      justify-self: center; }
+
+main .contacto .contacto__descripcion {
+  display: grid;
+  grid-template-areas: "titulo titulo" "redes mensajes";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr;
+  width: 100%;
+  height: 400px;
+  border-top: 4px double wheat;
+  border-bottom: 4px double wheat;
+  background-color: #3a090a;
+  color: white; }
+  main .contacto .contacto__descripcion h5 {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    grid-area: titulo;
+    font-size: 40px;
+    text-align: center; }
+  main .contacto .contacto__descripcion .redesSociales {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    grid-area: redes;
+    margin: 30px 0 0 30px; }
+    main .contacto .contacto__descripcion .redesSociales p {
+      margin-bottom: 30px;
+      font-size: 30px; }
+    main .contacto .contacto__descripcion .redesSociales a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      margin: 20px 0 20px 20px; }
+      main .contacto .contacto__descripcion .redesSociales a span {
+        margin-left: 10px; }
+      main .contacto .contacto__descripcion .redesSociales a img {
+        width: 40px;
+        height: 40px; }
+  main .contacto .contacto__descripcion .mensaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    grid-area: mensajes;
+    margin: 30px 0 0 30px; }
+    main .contacto .contacto__descripcion .mensaje p {
+      margin-bottom: 30px;
+      font-size: 30px; }
+    main .contacto .contacto__descripcion .mensaje a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      margin: 20px 0 20px 20px; }
+      main .contacto .contacto__descripcion .mensaje a span {
+        margin-left: 20px; }
+      main .contacto .contacto__descripcion .mensaje a img {
+        width: 40px;
+        height: 40px; }

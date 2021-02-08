@@ -12,6 +12,8 @@ parallaxT2.from('.bcg2', 1, { y: '-50%', ease: Power0.easeNone }, 0);
 var parallaxT3 = new TimelineMax();
 parallaxT3.from('.bcg3', 1, { y: '-50%', ease: Power0.easeNone }, 0);
 
+var parallaxT4 = new TimelineMax();
+parallaxT4.from('.bcg4', 1, { y: '-50%', ease: Power0.easeNone }, 0);
 
 //escenas
 var scene1 = new ScrollMagic.Scene({
@@ -38,6 +40,14 @@ var scene3 = new ScrollMagic.Scene({
         duration: '170%',
         triggerHook: 2
     }).setTween(parallaxT3)
+    .addIndicators()
+    .addTo(controller)
+
+var scene4 = new ScrollMagic.Scene({
+        triggerElement: '.parallaxContacto',
+        duration: '165%',
+        triggerHook: 2
+    }).setTween(parallaxT4)
     .addIndicators()
     .addTo(controller)
 

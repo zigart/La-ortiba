@@ -163,7 +163,9 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 1000px;
+            min-height: 850px;
+            border-top: 4px double wheat;
+            border-bottom: 4px double wheat;
             background-color: $bordo;
             .owl-carousel {
                 width: 90%;

@@ -1,3 +1,28 @@
+//anclas del menu
+
+// function scrollSection(i) {
+//     i.scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// }
+
+
+// document.querySelector("#quienesSomosMenu").addEventListener('click', function() {
+//     scrollSection(document.querySelector(".quienesSomos"))
+// });
+
+// document.querySelector("#integrantesMenu").addEventListener('click', function() {
+//     scrollSection(document.querySelector(".integrantes"))
+// });
+
+// document.querySelector("#showsMenu").addEventListener('click', function() {
+//     scrollSection(document.querySelector(".shows"))
+// });
+
+// document.querySelector("#contactoMenu").addEventListener('click', function() {
+//     scrollSection(document.querySelector(".contacto"))
+// });
+
 //scroll
 var controller = new ScrollMagic.Controller();
 //tiempo

@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   min-height: 2500px;
   scroll-behavior: smooth; }
@@ -40,9 +43,11 @@ body {
       color: white;
       text-decoration: none;
       transition: 350ms;
-      font-weight: 800; }
+      font-weight: 800;
+      user-select: none; }
       .navBar .navBar__desktop a:hover {
-        color: #3a090a; }
+        color: #3a090a;
+        cursor: pointer; }
     .navBar .navBar__desktop #quienesSomos {
       grid-area: "nosotros"; }
     .navBar .navBar__desktop #integrantes {

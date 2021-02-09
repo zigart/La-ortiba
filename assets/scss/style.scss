@@ -4,6 +4,10 @@
         padding: 0;
     }
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     body {
         min-height: 2500px;
         scroll-behavior: smooth;
@@ -46,8 +50,10 @@
                 text-decoration: none;
                 transition: 350ms;
                 font-weight: 800;
+                user-select: none;
                 &:hover {
                     color: $bordo;
+                    cursor: pointer;
                 }
             }
             #quienesSomos {

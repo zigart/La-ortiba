@@ -74,7 +74,7 @@ main .quienesSomos .parallaxQuienesSomos {
   overflow: hidden;
   position: relative; }
   main .quienesSomos .parallaxQuienesSomos .bcg1 {
-    background: url("/assets/img/foto.jpg");
+    background: url("../img/foto.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -125,7 +125,7 @@ main .integrantes .parallaxIntegrantes {
   overflow: hidden;
   position: relative; }
   main .integrantes .parallaxIntegrantes .bcg2 {
-    background: url("/assets/img/foto2.jpg");
+    background: url("../img/foto2.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -226,7 +226,7 @@ main .shows .parallaxShows {
   overflow: hidden;
   position: relative; }
   main .shows .parallaxShows .bcg3 {
-    background: url("/assets/img/tango.jpg");
+    background: url("../img/tango.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -269,7 +269,7 @@ main .contacto .parallaxContacto {
   overflow: hidden;
   position: relative; }
   main .contacto .parallaxContacto .bcg4 {
-    background: url("/assets/img/piano.jpg");
+    background: url("../img/piano.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;

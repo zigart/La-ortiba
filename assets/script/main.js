@@ -23,7 +23,6 @@ var scene1 = new ScrollMagic.Scene({
 })
 
 .setTween(parallaxT1)
-    .addIndicators()
     .addTo(controller)
 
 
@@ -32,7 +31,6 @@ var scene2 = new ScrollMagic.Scene({
         duration: '170%',
         triggerHook: 2
     }).setTween(parallaxT2)
-    .addIndicators()
     .addTo(controller)
 
 var scene3 = new ScrollMagic.Scene({
@@ -40,7 +38,6 @@ var scene3 = new ScrollMagic.Scene({
         duration: '170%',
         triggerHook: 2
     }).setTween(parallaxT3)
-    .addIndicators()
     .addTo(controller)
 
 var scene4 = new ScrollMagic.Scene({
@@ -48,7 +45,6 @@ var scene4 = new ScrollMagic.Scene({
         duration: '134%',
         triggerHook: 2
     }).setTween(parallaxT4)
-    .addIndicators()
     .addTo(controller)
 
 $(document).ready(function() {

@@ -45,7 +45,7 @@ var scene3 = new ScrollMagic.Scene({
 
 var scene4 = new ScrollMagic.Scene({
         triggerElement: '.parallaxContacto',
-        duration: '165%',
+        duration: '134%',
         triggerHook: 2
     }).setTween(parallaxT4)
     .addIndicators()

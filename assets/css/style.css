@@ -290,64 +290,84 @@ main .contacto .parallaxContacto {
       justify-self: center; }
 
 main .contacto .contacto__descripcion {
-  display: grid;
-  grid-template-areas: "titulo titulo" "redes mensajes";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.4fr 1fr;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
-  height: 400px;
+  height: 200px;
   border-top: 4px double wheat;
   border-bottom: 4px double wheat;
   background-color: #3a090a;
   color: white; }
-  main .contacto .contacto__descripcion h5 {
+  main .contacto .contacto__descripcion a {
     display: flex;
-    justify-self: center;
-    align-self: center;
-    grid-area: titulo;
-    font-size: 40px;
-    text-align: center; }
+    justify-content: ce;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    margin: 20px 0 20px 0px; }
+    main .contacto .contacto__descripcion a span {
+      margin-left: 10px; }
+    main .contacto .contacto__descripcion a img {
+      width: 40px;
+      height: 40px; }
   main .contacto .contacto__descripcion .redesSociales {
-    display: flex;
+    display: grid;
+    grid-template-areas: "instagram " "facebook";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    grid-area: redes;
-    margin: 30px 0 0 30px; }
+    justify-content: center;
+    align-items: center; }
     main .contacto .contacto__descripcion .redesSociales p {
+      grid-area: redesSociales;
+      text-align: center;
       margin-bottom: 30px;
+      margin-left: 40px;
       font-size: 30px; }
     main .contacto .contacto__descripcion .redesSociales a {
       display: flex;
-      justify-content: center;
+      justify-content: ce;
       align-items: center;
       text-decoration: none;
       color: white;
-      margin: 20px 0 20px 20px; }
+      margin: 20px 0 20px 0px; }
       main .contacto .contacto__descripcion .redesSociales a span {
         margin-left: 10px; }
       main .contacto .contacto__descripcion .redesSociales a img {
         width: 40px;
         height: 40px; }
+    main .contacto .contacto__descripcion .redesSociales .instagram {
+      grid-area: instagram; }
+    main .contacto .contacto__descripcion .redesSociales .facebook {
+      grid-area: facebook; }
   main .contacto .contacto__descripcion .mensaje {
-    display: flex;
+    display: grid;
+    grid-template-areas: "envianosTitulos" "email" "whatsapp";
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    grid-area: mensajes;
-    margin: 30px 0 0 30px; }
+    grid-area: mensajes; }
     main .contacto .contacto__descripcion .mensaje p {
+      text-align: center;
       margin-bottom: 30px;
-      font-size: 30px; }
+      margin-left: 40px;
+      font-size: 30px;
+      grid-area: envianosTitulos; }
     main .contacto .contacto__descripcion .mensaje a {
       display: flex;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       text-decoration: none;
       color: white;
-      margin: 20px 0 20px 20px; }
+      margin: 20px 0 20px 150px; }
       main .contacto .contacto__descripcion .mensaje a span {
         margin-left: 20px; }
       main .contacto .contacto__descripcion .mensaje a img {
         width: 40px;
         height: 40px; }
+    main .contacto .contacto__descripcion .mensaje .email {
+      grid-area: email; }
+    main .contacto .contacto__descripcion .mensaje .whatsapp {
+      grid-area: whatsapp; }

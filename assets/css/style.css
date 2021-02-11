@@ -59,14 +59,6 @@ body {
     .navBar .navBar__desktop #contacto {
       grid-area: "contacto"; }
 
-.esconderNav {
-  transform: translateY(-100%);
-  transition: all 0.3s ease-in-out; }
-
-.mostrarNav {
-  transform: translateY(0);
-  transition: all 0.3s ease-in-out; }
-
 main .quienesSomos .parallaxQuienesSomos {
   display: flex;
   align-items: center;
@@ -409,5 +401,120 @@ main .contacto .contacto__descripcion {
     .navBar span {
       grid-area: texto;
       justify-self: center; }
+  main .quienesSomos .parallaxQuienesSomos {
+    height: 30vh; }
+    main .quienesSomos .parallaxQuienesSomos .bcg1 {
+      background: url("../img/fotoCelular.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 1; }
+    main .quienesSomos .parallaxQuienesSomos .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 100%;
+      max-width: 440px;
+      position: relative;
+      font-size: 80px;
+      z-index: 2; }
+      main .quienesSomos .parallaxQuienesSomos .content-wrapper h1 {
+        display: flex;
+        font-size: 40px;
+        align-self: center;
+        justify-self: center;
+        text-align: center; }
+  main .integrantes .parallaxIntegrantes {
+    height: 30vh; }
+    main .integrantes .parallaxIntegrantes .bcg2 {
+      background: url("../img/foto2Celular.jpg");
+      background-position: 20%;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    main .integrantes .parallaxIntegrantes .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 100%;
+      max-width: 1140px;
+      position: relative;
+      font-size: 80px;
+      z-index: 2; }
+      main .integrantes .parallaxIntegrantes .content-wrapper h2 {
+        font-size: 40px;
+        display: flex;
+        align-self: center;
+        justify-self: center; }
+  main .integrantes .integrantes__descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 850px;
+    border-top: 4px double wheat;
+    border-bottom: 4px double wheat;
+    background-color: #3a090a; }
+    main .integrantes .integrantes__descripcion .owl-carousel {
+      width: 90%; }
+    main .integrantes .integrantes__descripcion .owl-item {
+      display: flex;
+      justify-content: center; }
+    main .integrantes .integrantes__descripcion .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      width: 85%;
+      min-height: 680px;
+      background-color: wheat;
+      overflow: hidden;
+      padding: 20px;
+      margin: 0;
+      border: 2px double #3a090a; }
+      main .integrantes .integrantes__descripcion .card img {
+        width: 200px;
+        height: 200px;
+        margin: 40px 0;
+        border-radius: 100%; }
+      main .integrantes .integrantes__descripcion .card .nombre {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 800; }
+      main .integrantes .integrantes__descripcion .card .descripcion {
+        text-align: center;
+        font-family: 'Cairo', sans-serif; }
+    main .integrantes .integrantes__descripcion .card--1,
+    main .integrantes .integrantes__descripcion .card--2,
+    main .integrantes .integrantes__descripcion .card--3,
+    main .integrantes .integrantes__descripcion .card--4,
+    main .integrantes .integrantes__descripcion .card--5,
+    main .integrantes .integrantes__descripcion .card--6 {
+      transition: 1s; }
+      main .integrantes .integrantes__descripcion .card--1:hover,
+      main .integrantes .integrantes__descripcion .card--2:hover,
+      main .integrantes .integrantes__descripcion .card--3:hover,
+      main .integrantes .integrantes__descripcion .card--4:hover,
+      main .integrantes .integrantes__descripcion .card--5:hover,
+      main .integrantes .integrantes__descripcion .card--6:hover {
+        border: 4px solid white; }
+    main .integrantes .integrantes__descripcion .customPrevBtn,
+    main .integrantes .integrantes__descripcion .customNextBtn {
+      text-align: center;
+      border-radius: 100%;
+      border: 1px solid black;
+      width: 40px;
+      height: 40px;
+      font-size: 30px;
+      background-color: #b7a735;
+      outline: none;
+      cursor: pointer; }
+    main .integrantes .integrantes__descripcion .owl-dots {
+      display: none; }
   .contacto {
     display: none; } }

@@ -428,6 +428,10 @@ main .contacto .contacto__descripcion {
         align-self: center;
         justify-self: center;
         text-align: center; }
+  main .quienesSomos .quienesSomos__descripcion {
+    line-height: 30px;
+    padding: 10px;
+    font-size: 20px; }
   main .integrantes .parallaxIntegrantes {
     height: 30vh; }
     main .integrantes .parallaxIntegrantes .bcg2 {

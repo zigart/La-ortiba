@@ -13,6 +13,7 @@
         scroll-behavior: smooth;
     }
     
+    //*************************************HEADER********************************************
     .header {
         display: flex;
         justify-content: center;
@@ -26,6 +27,7 @@
         }
     }
     
+    //*************************************NAVBAR***********************************************
     .navBar {
         z-index: 99;
         position: sticky;
@@ -73,7 +75,9 @@
         }
     }
     
+    //**************************************MAIN****************************************************
     main {
+        //*********************************QUIENES SOMOS********************************************
         .quienesSomos {
             .parallaxQuienesSomos {
                 display: flex;
@@ -130,6 +134,7 @@
                 border-bottom: 4px double wheat;
             }
         }
+        //****************************************INTEGRANTES******************************************
         .integrantes {
             .parallaxIntegrantes {
                 display: flex;
@@ -241,6 +246,7 @@
                 }
             }
         }
+        //*****************************************SHOWS*********************************************
         .shows {
             .parallaxShows {
                 display: flex;
@@ -289,6 +295,7 @@
                 background-color: $bordo;
             }
         }
+        //**************************************CONTACTO**********************************************
         .contacto {
             .parallaxContacto {
                 display: flex;
@@ -499,6 +506,11 @@
                             text-align: center;
                         }
                     }
+                }
+                .quienesSomos__descripcion {
+                    line-height: 30px;
+                    padding: 10px;
+                    font-size: 20px;
                 }
             }
             .integrantes {

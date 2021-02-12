@@ -409,9 +409,7 @@ main .contacto .contacto__descripcion {
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 1; }
+      height: 100%; }
     main .quienesSomos .parallaxQuienesSomos .content-wrapper {
       display: flex;
       align-items: center;
@@ -470,55 +468,56 @@ main .contacto .contacto__descripcion {
       display: flex;
       justify-content: center; }
     main .integrantes .integrantes__descripcion .card {
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      width: 85%;
-      min-height: 680px;
-      background-color: wheat;
-      overflow: hidden;
-      padding: 20px;
-      margin: 0;
-      border: 2px double #3a090a; }
+      width: 80%;
+      min-height: 620px;
+      padding: 20px; }
       main .integrantes .integrantes__descripcion .card img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         margin: 40px 0;
         border-radius: 100%; }
       main .integrantes .integrantes__descripcion .card .nombre {
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 800; }
       main .integrantes .integrantes__descripcion .card .descripcion {
         text-align: center;
-        font-family: 'Cairo', sans-serif; }
-    main .integrantes .integrantes__descripcion .card--1,
-    main .integrantes .integrantes__descripcion .card--2,
-    main .integrantes .integrantes__descripcion .card--3,
-    main .integrantes .integrantes__descripcion .card--4,
-    main .integrantes .integrantes__descripcion .card--5,
-    main .integrantes .integrantes__descripcion .card--6 {
-      transition: 1s; }
-      main .integrantes .integrantes__descripcion .card--1:hover,
-      main .integrantes .integrantes__descripcion .card--2:hover,
-      main .integrantes .integrantes__descripcion .card--3:hover,
-      main .integrantes .integrantes__descripcion .card--4:hover,
-      main .integrantes .integrantes__descripcion .card--5:hover,
-      main .integrantes .integrantes__descripcion .card--6:hover {
-        border: 4px solid white; }
+        font-family: 'Cairo', sans-serif;
+        font-size: 15px;
+        line-height: 20px; }
     main .integrantes .integrantes__descripcion .customPrevBtn,
     main .integrantes .integrantes__descripcion .customNextBtn {
       text-align: center;
-      border-radius: 100%;
-      border: 1px solid black;
+      border-radius: 0%;
       width: 40px;
       height: 40px;
-      font-size: 30px;
-      background-color: #b7a735;
-      outline: none;
-      cursor: pointer; }
-    main .integrantes .integrantes__descripcion .owl-dots {
-      display: none; }
+      font-size: 30px; }
+  main .shows .parallaxShows {
+    height: 30vh; }
+    main .shows .parallaxShows .bcg3 {
+      background: url("../img/fotoCelular.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%; }
+    main .shows .parallaxShows .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 100%;
+      max-width: 1140px;
+      position: relative;
+      font-size: 80px;
+      z-index: 2; }
+      main .shows .parallaxShows .content-wrapper h3 {
+        font-size: 50px; }
+  main .shows .shows__descripcion {
+    width: 100%;
+    height: 500px;
+    border-top: 4px double wheat;
+    border-bottom: 4px double wheat;
+    background-color: #3a090a; }
   .contacto {
     display: none; } }

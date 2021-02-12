@@ -485,8 +485,6 @@
                         background-repeat: no-repeat;
                         width: 100%;
                         height: 100%;
-                        z-index: 1;
-                        opacity: 1;
                     }
                     .content-wrapper {
                         display: flex;
@@ -558,59 +556,69 @@
                         justify-content: center;
                     }
                     .card {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: start;
-                        align-items: center;
-                        width: 85%;
-                        min-height: 680px;
-                        background-color: wheat;
-                        overflow: hidden;
+                        width: 80%;
+                        min-height: 620px;
                         padding: 20px;
-                        margin: 0;
-                        border: 2px double $bordo;
                         img {
-                            width: 200px;
-                            height: 200px;
+                            width: 150px;
+                            height: 150px;
                             margin: 40px 0;
                             border-radius: 100%;
                         }
                         .nombre {
                             text-align: center;
-                            font-size: 30px;
+                            font-size: 25px;
                             font-weight: 800;
                         }
                         .descripcion {
                             text-align: center;
                             font-family: 'Cairo', sans-serif;
-                        }
-                    }
-                    .card--1,
-                    .card--2,
-                    .card--3,
-                    .card--4,
-                    .card--5,
-                    .card--6 {
-                        transition: 1s;
-                        &:hover {
-                            border: 4px solid white;
+                            font-size: 15px;
+                            line-height: 20px;
                         }
                     }
                     .customPrevBtn,
                     .customNextBtn {
                         text-align: center;
-                        border-radius: 100%;
-                        border: 1px solid black;
+                        border-radius: 0%;
                         width: 40px;
                         height: 40px;
                         font-size: 30px;
-                        background-color: #b7a735;
-                        outline: none;
-                        cursor: pointer;
                     }
-                    .owl-dots {
-                        display: none;
+                }
+            }
+            .shows {
+                .parallaxShows {
+                    height: 30vh;
+                    .bcg3 {
+                        background: url("../img/fotoCelular.jpg");
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100%;
                     }
+                    .content-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 90%;
+                        height: 100%;
+                        max-width: 1140px;
+                        position: relative;
+                        font-size: 80px;
+                        z-index: 2;
+                        h3 {
+                            font-size: 50px;
+                        }
+                    }
+                }
+                .shows__descripcion {
+                    width: 100%;
+                    height: 500px;
+                    border-top: 4px double wheat;
+                    border-bottom: 4px double wheat;
+                    background-color: $bordo;
                 }
             }
         }

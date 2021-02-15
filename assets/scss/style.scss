@@ -1,105 +1,427 @@
-    $bordo:#3a090a;
-    * {
-        margin: 0;
-        padding: 0;
+$bordo:#3a090a;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 2500px;
+    scroll-behavior: smooth;
+}
+
+//*************************************HEADER********************************************
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    .header__image {
+        width: 96%;
+        height: 96%;
     }
-    
-    html {
-        scroll-behavior: smooth;
+}
+
+//*************************************NAVBAR***********************************************
+.navBar {
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #b7a735;
+    label,
+    input,
+    .menuToggle {
+        display: none;
     }
-    
-    body {
-        min-height: 2500px;
-        scroll-behavior: smooth;
+    .navBar__desktop {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "nosotros integrantes shows contacto";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+        a {
+            color: white;
+            text-decoration: none;
+            transition: 350ms;
+            font-weight: 800;
+            user-select: none;
+            &:hover {
+                color: $bordo;
+                cursor: pointer;
+            }
+        }
+        #quienesSomos {
+            grid-area: "nosotros";
+        }
+        #integrantes {
+            grid-area: "shows";
+        }
+        #contacto {
+            grid-area: "contacto";
+        }
     }
-    
-    //*************************************HEADER********************************************
+}
+
+//**************************************MAIN****************************************************
+main {
+    //*********************************QUIENES SOMOS********************************************
+    .quienesSomos {
+        .parallaxQuienesSomos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            padding: 150px 0;
+            color: rgb(255, 243, 220);
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            .bcg1 {
+                background: url("../img/foto.jpg");
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                filter: brightness(65%) blur(2px);
+                width: 100%;
+                height: 150%;
+                top: 0;
+                z-index: 1;
+                opacity: 1;
+            }
+            .content-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                max-width: 1140px;
+                position: relative;
+                font-size: 80px;
+                z-index: 2;
+                h1 {
+                    display: flex;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+        }
+        .quienesSomos__descripcion {
+            display: flex;
+            line-height: 40px;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            min-height: 200px;
+            padding: 30px;
+            font-size: 25px;
+            color: wheat;
+            background-color: $bordo;
+            border-top: 4px double wheat;
+            border-bottom: 4px double wheat;
+        }
+    }
+    //****************************************INTEGRANTES******************************************
+    .integrantes {
+        .parallaxIntegrantes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            padding: 150px 0;
+            color: rgb(255, 243, 220);
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            .bcg2 {
+                background: url("../img/foto2.jpg");
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                filter: brightness(65%) blur(2px);
+                width: 100%;
+                height: 150%;
+                top: 0;
+                z-index: 1;
+                opacity: 1;
+            }
+            .content-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                max-width: 1140px;
+                position: relative;
+                font-size: 80px;
+                z-index: 2;
+                h2 {
+                    display: flex;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+        }
+        .integrantes__descripcion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 850px;
+            border-top: 4px double wheat;
+            border-bottom: 4px double wheat;
+            background-color: $bordo;
+            .owl-carousel {
+                width: 90%;
+            }
+            .owl-item {
+                display: flex;
+                justify-content: center;
+            }
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                width: 85%;
+                min-height: 680px;
+                background-color: wheat;
+                overflow: hidden;
+                padding: 20px;
+                margin: 0;
+                border: 2px double $bordo;
+                img {
+                    width: 200px;
+                    height: 200px;
+                    margin: 40px 0;
+                    border-radius: 100%;
+                }
+                .nombre {
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 800;
+                }
+                .descripcion {
+                    text-align: center;
+                    font-family: 'Cairo', sans-serif;
+                }
+            }
+            .card--1,
+            .card--2,
+            .card--3,
+            .card--4,
+            .card--5,
+            .card--6 {
+                transition: 400ms;
+                &:hover {
+                    border: 4px solid white;
+                }
+            }
+            .customPrevBtn,
+            .customNextBtn {
+                text-align: center;
+                border-radius: 100%;
+                border: 1px solid black;
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+                background-color: #b7a735;
+                outline: none;
+                cursor: pointer;
+            }
+            .owl-dots {
+                display: none;
+            }
+        }
+    }
+    //*****************************************SHOWS*********************************************
+    .shows {
+        .parallaxShows {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            padding: 150px 0;
+            color: rgb(255, 243, 220);
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            .bcg3 {
+                background: url("../img/foto.jpg");
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                filter: brightness(65%) blur(2px);
+                width: 100%;
+                height: 150%;
+                top: 0;
+                z-index: 1;
+                opacity: 1;
+            }
+            .content-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                max-width: 1140px;
+                position: relative;
+                font-size: 80px;
+                z-index: 2;
+                h2 {
+                    display: flex;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+        }
+        .shows__descripcion {
+            width: 100%;
+            height: 500px;
+            border-top: 4px double wheat;
+            border-bottom: 4px double wheat;
+            background-color: $bordo;
+        }
+    }
+    //**************************************CONTACTO**********************************************
+    .contacto {
+        .parallaxContacto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            padding: 150px 0;
+            color: rgb(255, 243, 220);
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            .bcg4 {
+                background: url("../img/piano.jpg");
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                filter: brightness(65%) blur(2px);
+                width: 100%;
+                height: 150%;
+                top: 0;
+                z-index: 1;
+                opacity: 1;
+            }
+            .content-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 90%;
+                height: 100%;
+                max-width: 1140px;
+                position: relative;
+                font-size: 80px;
+                z-index: 2;
+                h4 {
+                    display: flex;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+        }
+        .contacto__descripcion {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 200px;
+            border-top: 4px double wheat;
+            border-bottom: 4px double wheat;
+            background-color: $bordo;
+            color: white;
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                span {
+                    margin-left: 10px;
+                }
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                margin: 20px 0 20px 0px;
+                span {
+                    margin-left: 10px;
+                }
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+//responsive
+@media (max-width: 480px) {
     .header {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100vh;
+        height: 300px;
         background-color: black;
         .header__image {
-            width: 96%;
-            height: 96%;
+            width: 100%;
+            height: auto;
         }
     }
-    
-    //*************************************NAVBAR***********************************************
     .navBar {
-        z-index: 99;
-        position: sticky;
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        height: 40px;
-        background-color: #b7a735;
-        label,
-        input,
-        .menuToggle {
+        height: 35px;
+        display: grid;
+        grid-template-areas: "menu texto none";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-items: start;
+        .navBar__desktop {
             display: none;
         }
-        .navBar__desktop {
-            width: 100%;
-            display: grid;
-            grid-template-areas: "nosotros integrantes shows contacto";
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-            align-items: center;
-            list-style: none;
-            text-align: center;
-            a {
-                color: white;
-                text-decoration: none;
-                transition: 350ms;
-                font-weight: 800;
-                user-select: none;
-                &:hover {
-                    color: $bordo;
-                    cursor: pointer;
-                }
-            }
-            #quienesSomos {
-                grid-area: "nosotros";
-            }
-            #integrantes {
-                grid-area: "shows";
-            }
-            #contacto {
-                grid-area: "contacto";
-            }
+        label {
+            display: block;
+            grid-area: menu;
+            margin-left: 8px;
+        }
+        span {
+            grid-area: texto;
+            justify-self: center;
         }
     }
-    
-    //**************************************MAIN****************************************************
     main {
-        //*********************************QUIENES SOMOS********************************************
         .quienesSomos {
             .parallaxQuienesSomos {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 60vh;
-                padding: 150px 0;
-                color: rgb(255, 243, 220);
-                background-color: #000;
-                overflow: hidden;
-                position: relative;
+                height: 30vh;
                 .bcg1 {
-                    background: url("../img/foto.jpg");
+                    background: url("../img/fotoCelular.jpg");
                     background-position: center;
                     background-size: cover;
-                    position: absolute;
-                    filter: brightness(65%) blur(2px);
+                    background-repeat: no-repeat;
                     width: 100%;
-                    height: 150%;
-                    top: 0;
-                    z-index: 1;
-                    opacity: 1;
+                    height: 100%;
                 }
                 .content-wrapper {
                     display: flex;
@@ -107,56 +429,35 @@
                     justify-content: center;
                     width: 90%;
                     height: 100%;
-                    max-width: 1140px;
+                    max-width: 440px;
                     position: relative;
                     font-size: 80px;
                     z-index: 2;
                     h1 {
                         display: flex;
+                        font-size: 40px;
                         align-self: center;
                         justify-self: center;
+                        text-align: center;
                     }
                 }
             }
             .quienesSomos__descripcion {
-                display: flex;
-                line-height: 40px;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                min-height: 200px;
-                padding: 30px;
-                font-size: 25px;
-                color: wheat;
-                background-color: $bordo;
-                border-top: 4px double wheat;
-                border-bottom: 4px double wheat;
+                line-height: 30px;
+                padding: 10px;
+                font-size: 20px;
             }
         }
-        //****************************************INTEGRANTES******************************************
         .integrantes {
             .parallaxIntegrantes {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 60vh;
-                padding: 150px 0;
-                color: rgb(255, 243, 220);
-                background-color: #000;
-                overflow: hidden;
-                position: relative;
+                height: 30vh;
                 .bcg2 {
-                    background: url("../img/foto2.jpg");
-                    background-position: center;
+                    background: url("../img/foto2Celular.jpg");
+                    background-position: 20%;
                     background-size: cover;
                     position: absolute;
-                    filter: brightness(65%) blur(2px);
                     width: 100%;
-                    height: 150%;
-                    top: 0;
-                    z-index: 1;
-                    opacity: 1;
+                    height: 100%;
                 }
                 .content-wrapper {
                     display: flex;
@@ -169,6 +470,7 @@
                     font-size: 80px;
                     z-index: 2;
                     h2 {
+                        font-size: 40px;
                         display: flex;
                         align-self: center;
                         justify-self: center;
@@ -177,12 +479,7 @@
             }
             .integrantes__descripcion {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 850px;
-                border-top: 4px double wheat;
-                border-bottom: 4px double wheat;
-                background-color: $bordo;
+                justify-content: space-around;
                 .owl-carousel {
                     width: 90%;
                 }
@@ -191,84 +488,65 @@
                     justify-content: center;
                 }
                 .card {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: start;
-                    align-items: center;
-                    width: 85%;
-                    min-height: 680px;
-                    background-color: wheat;
-                    overflow: hidden;
+                    width: 100%;
+                    min-height: 620px;
                     padding: 20px;
-                    margin: 0;
-                    border: 2px double $bordo;
+                    margin-bottom: 20px;
                     img {
-                        width: 200px;
-                        height: 200px;
+                        width: 150px;
+                        height: 150px;
                         margin: 40px 0;
                         border-radius: 100%;
                     }
                     .nombre {
                         text-align: center;
-                        font-size: 30px;
+                        font-size: 25px;
                         font-weight: 800;
                     }
                     .descripcion {
                         text-align: center;
-                        font-family: 'Cairo', sans-serif;
+                        font-size: 15px;
+                        line-height: 20px;
                     }
-                }
-                .card--1,
-                .card--2,
-                .card--3,
-                .card--4,
-                .card--5,
-                .card--6 {
-                    transition: 1s;
                     &:hover {
-                        border: 4px solid white;
+                        border: none;
                     }
                 }
                 .customPrevBtn,
                 .customNextBtn {
-                    text-align: center;
-                    border-radius: 100%;
-                    border: 1px solid black;
-                    width: 40px;
-                    height: 40px;
-                    font-size: 30px;
-                    background-color: #b7a735;
-                    outline: none;
-                    cursor: pointer;
+                    display: none;
                 }
                 .owl-dots {
-                    display: none;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    height: 30px;
+                    .owl-dot {
+                        display: inline;
+                        width: 10px;
+                        height: 10px;
+                        margin: 5px 7px;
+                        background: #D6D6D6;
+                        display: block;
+                        transition: opacity .2s ease;
+                        border-radius: 30px;
+                    }
+                    .owl-dot.active {
+                        background-color: wheat;
+                    }
                 }
             }
         }
-        //*****************************************SHOWS*********************************************
         .shows {
             .parallaxShows {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 60vh;
-                padding: 150px 0;
-                color: rgb(255, 243, 220);
-                background-color: #000;
-                overflow: hidden;
-                position: relative;
+                height: 30vh;
                 .bcg3 {
-                    background: url("../img/foto.jpg");
+                    background: url("../img/fotoCelular.jpg");
                     background-position: center;
                     background-size: cover;
-                    position: absolute;
-                    filter: brightness(65%) blur(2px);
+                    background-repeat: no-repeat;
                     width: 100%;
-                    height: 150%;
-                    top: 0;
-                    z-index: 1;
-                    opacity: 1;
+                    height: 100%;
                 }
                 .content-wrapper {
                     display: flex;
@@ -280,10 +558,8 @@
                     position: relative;
                     font-size: 80px;
                     z-index: 2;
-                    h2 {
-                        display: flex;
-                        align-self: center;
-                        justify-self: center;
+                    h3 {
+                        font-size: 50px;
                     }
                 }
             }
@@ -295,334 +571,48 @@
                 background-color: $bordo;
             }
         }
-        //**************************************CONTACTO**********************************************
-        .contacto {
-            .parallaxContacto {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 60vh;
-                padding: 150px 0;
-                color: rgb(255, 243, 220);
-                background-color: #000;
-                overflow: hidden;
-                position: relative;
-                .bcg4 {
-                    background: url("../img/piano.jpg");
-                    background-position: center;
-                    background-size: cover;
-                    position: absolute;
-                    filter: brightness(65%) blur(2px);
-                    width: 100%;
-                    height: 150%;
-                    top: 0;
-                    z-index: 1;
-                    opacity: 1;
-                }
-                .content-wrapper {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 90%;
-                    height: 100%;
-                    max-width: 1140px;
-                    position: relative;
-                    font-size: 80px;
-                    z-index: 2;
-                    h2 {
-                        display: flex;
-                        align-self: center;
-                        justify-self: center;
-                    }
-                }
-            }
-            .contacto__descripcion {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-                height: 200px;
-                border-top: 4px double wheat;
-                border-bottom: 4px double wheat;
-                background-color: $bordo;
-                color: white;
-                a {
-                    display: flex;
-                    justify-content: ce;
-                    align-items: center;
-                    text-decoration: none;
-                    color: white;
-                    margin: 20px 0 20px 0px;
-                    span {
-                        margin-left: 10px;
-                    }
-                    img {
-                        width: 40px;
-                        height: 40px;
-                    }
-                }
-                .redesSociales {
-                    display: grid;
-                    grid-template-areas: "instagram " "facebook";
-                    grid-template-columns: 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    p {
-                        grid-area: redesSociales;
-                        text-align: center;
-                        margin-bottom: 30px;
-                        margin-left: 40px;
-                        font-size: 30px;
-                    }
-                    a {
-                        display: flex;
-                        justify-content: ce;
-                        align-items: center;
-                        text-decoration: none;
-                        color: white;
-                        margin: 20px 0 20px 0px;
-                        span {
-                            margin-left: 10px;
-                        }
-                        img {
-                            width: 40px;
-                            height: 40px;
-                        }
-                    }
-                    .instagram {
-                        grid-area: instagram;
-                    }
-                    .facebook {
-                        grid-area: facebook;
-                    }
-                }
-                .mensaje {
-                    display: grid;
-                    grid-template-areas: "envianosTitulos" "email" "whatsapp";
-                    grid-template-columns: 1fr;
-                    grid-template-rows: 0.5fr 1fr 1fr;
-                    flex-direction: column;
-                    justify-content: start;
-                    align-items: start;
-                    grid-area: mensajes;
-                    p {
-                        text-align: center;
-                        margin-bottom: 30px;
-                        margin-left: 40px;
-                        font-size: 30px;
-                        grid-area: envianosTitulos;
-                    }
-                    a {
-                        display: flex;
-                        justify-content: start;
-                        align-items: center;
-                        text-decoration: none;
-                        color: white;
-                        margin: 20px 0 20px 150px;
-                        span {
-                            margin-left: 20px;
-                        }
-                        img {
-                            width: 40px;
-                            height: 40px;
-                        }
-                    }
-                    .email {
-                        grid-area: email;
-                    }
-                    .whatsapp {
-                        grid-area: whatsapp;
-                    }
-                }
-            }
-        }
     }
-    
-    //responsive
-    @media (max-width: 480px) {
-        .header {
+    .contacto {
+        overflow: hidden;
+        .parallaxContacto {
             display: flex;
+            align-items: center;
             justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 300px;
-            background-color: black;
-            .header__image {
+            height: 60vh;
+            padding: 150px 0;
+            color: rgb(255, 243, 220);
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            .bcg4 {
+                background: url("../img/piano.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
                 width: 100%;
-                height: auto;
+                height: 100%;
             }
-        }
-        .navBar {
-            height: 35px;
-            display: grid;
-            grid-template-areas: "menu texto none";
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-            align-items: center;
-            justify-items: start;
-            .navBar__desktop {
-                display: none;
-            }
-            label {
-                display: block;
-                grid-area: menu;
-                margin-left: 8px;
-            }
-            span {
-                grid-area: texto;
-                justify-self: center;
-            }
-        }
-        main {
-            .quienesSomos {
-                .parallaxQuienesSomos {
-                    height: 30vh;
-                    .bcg1 {
-                        background: url("../img/fotoCelular.jpg");
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    .content-wrapper {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 90%;
-                        height: 100%;
-                        max-width: 440px;
-                        position: relative;
-                        font-size: 80px;
-                        z-index: 2;
-                        h1 {
-                            display: flex;
-                            font-size: 40px;
-                            align-self: center;
-                            justify-self: center;
-                            text-align: center;
-                        }
-                    }
-                }
-                .quienesSomos__descripcion {
-                    line-height: 30px;
-                    padding: 10px;
-                    font-size: 20px;
+            .content-wrapper {
+                h4 {
+                    font-size: 50px;
                 }
             }
-            .integrantes {
-                .parallaxIntegrantes {
-                    height: 30vh;
-                    .bcg2 {
-                        background: url("../img/foto2Celular.jpg");
-                        background-position: 20%;
-                        background-size: cover;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    .content-wrapper {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 90%;
-                        height: 100%;
-                        max-width: 1140px;
-                        position: relative;
-                        font-size: 80px;
-                        z-index: 2;
-                        h2 {
-                            font-size: 40px;
-                            display: flex;
-                            align-self: center;
-                            justify-self: center;
-                        }
-                    }
-                }
-                .integrantes__descripcion {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    min-height: 850px;
-                    border-top: 4px double wheat;
-                    border-bottom: 4px double wheat;
-                    background-color: $bordo;
-                    .owl-carousel {
-                        width: 90%;
-                    }
-                    .owl-item {
-                        display: flex;
-                        justify-content: center;
-                    }
-                    .card {
-                        width: 80%;
-                        min-height: 620px;
-                        padding: 20px;
-                        img {
-                            width: 150px;
-                            height: 150px;
-                            margin: 40px 0;
-                            border-radius: 100%;
-                        }
-                        .nombre {
-                            text-align: center;
-                            font-size: 25px;
-                            font-weight: 800;
-                        }
-                        .descripcion {
-                            text-align: center;
-                            font-family: 'Cairo', sans-serif;
-                            font-size: 15px;
-                            line-height: 20px;
-                        }
-                    }
-                    .customPrevBtn,
-                    .customNextBtn {
-                        text-align: center;
-                        border-radius: 0%;
-                        width: 40px;
-                        height: 40px;
-                        font-size: 30px;
-                    }
-                }
-            }
-            .shows {
-                .parallaxShows {
-                    height: 30vh;
-                    .bcg3 {
-                        background: url("../img/fotoCelular.jpg");
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        width: 100%;
-                        height: 100%;
-                    }
-                    .content-wrapper {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 90%;
-                        height: 100%;
-                        max-width: 1140px;
-                        position: relative;
-                        font-size: 80px;
-                        z-index: 2;
-                        h3 {
-                            font-size: 50px;
-                        }
-                    }
-                }
-                .shows__descripcion {
-                    width: 100%;
-                    height: 500px;
-                    border-top: 4px double wheat;
-                    border-bottom: 4px double wheat;
-                    background-color: $bordo;
-                }
-            }
-        }
-        .contacto {
-            display: none;
         }
     }
+    .contacto__descripcion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 400px !important;
+        a {
+            span {
+                margin-left: 10px;
+            }
+            img {
+                width: 20px;
+                height: 20px;
+                margin-left: 15px;
+            }
+        }
+    }
+}

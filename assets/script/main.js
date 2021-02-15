@@ -56,19 +56,16 @@ $(document).ready(function() {
 
     var owl = $('.owl-carousel');
 
-    if ($(window).width() <= 768) {
-        owl.owlCarousel({
-            loop: true,
-            items: 1,
+    owl.owlCarousel({
+        loop: true,
+        items: 1,
+        dots: true,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 }
+        }
+    });
 
-        });
-    } else {
-        owl.owlCarousel({
-            loop: true,
-            items: 2,
-
-        });
-    }
 
     $('.customNextBtn').click(function() {
         owl.trigger('next.owl.carousel', [500]);

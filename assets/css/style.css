@@ -99,7 +99,7 @@ main .quienesSomos .quienesSomos__descripcion {
   display: flex;
   line-height: 40px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   min-height: 200px;
@@ -189,7 +189,7 @@ main .integrantes .integrantes__descripcion {
   main .integrantes .integrantes__descripcion .card--4,
   main .integrantes .integrantes__descripcion .card--5,
   main .integrantes .integrantes__descripcion .card--6 {
-    transition: 1s; }
+    transition: 400ms; }
     main .integrantes .integrantes__descripcion .card--1:hover,
     main .integrantes .integrantes__descripcion .card--2:hover,
     main .integrantes .integrantes__descripcion .card--3:hover,
@@ -285,7 +285,7 @@ main .contacto .parallaxContacto {
     position: relative;
     font-size: 80px;
     z-index: 2; }
-    main .contacto .parallaxContacto .content-wrapper h2 {
+    main .contacto .parallaxContacto .content-wrapper h4 {
       display: flex;
       align-self: center;
       justify-self: center; }
@@ -301,7 +301,16 @@ main .contacto .contacto__descripcion {
   color: white; }
   main .contacto .contacto__descripcion a {
     display: flex;
-    justify-content: ce;
+    align-items: center;
+    text-decoration: none;
+    color: white; }
+    main .contacto .contacto__descripcion a span {
+      margin-left: 10px; }
+    main .contacto .contacto__descripcion a img {
+      width: 40px;
+      height: 40px; }
+  main .contacto .contacto__descripcion a {
+    display: flex;
     align-items: center;
     text-decoration: none;
     color: white;
@@ -311,67 +320,6 @@ main .contacto .contacto__descripcion {
     main .contacto .contacto__descripcion a img {
       width: 40px;
       height: 40px; }
-  main .contacto .contacto__descripcion .redesSociales {
-    display: grid;
-    grid-template-areas: "instagram " "facebook";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    main .contacto .contacto__descripcion .redesSociales p {
-      grid-area: redesSociales;
-      text-align: center;
-      margin-bottom: 30px;
-      margin-left: 40px;
-      font-size: 30px; }
-    main .contacto .contacto__descripcion .redesSociales a {
-      display: flex;
-      justify-content: ce;
-      align-items: center;
-      text-decoration: none;
-      color: white;
-      margin: 20px 0 20px 0px; }
-      main .contacto .contacto__descripcion .redesSociales a span {
-        margin-left: 10px; }
-      main .contacto .contacto__descripcion .redesSociales a img {
-        width: 40px;
-        height: 40px; }
-    main .contacto .contacto__descripcion .redesSociales .instagram {
-      grid-area: instagram; }
-    main .contacto .contacto__descripcion .redesSociales .facebook {
-      grid-area: facebook; }
-  main .contacto .contacto__descripcion .mensaje {
-    display: grid;
-    grid-template-areas: "envianosTitulos" "email" "whatsapp";
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    grid-area: mensajes; }
-    main .contacto .contacto__descripcion .mensaje p {
-      text-align: center;
-      margin-bottom: 30px;
-      margin-left: 40px;
-      font-size: 30px;
-      grid-area: envianosTitulos; }
-    main .contacto .contacto__descripcion .mensaje a {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      text-decoration: none;
-      color: white;
-      margin: 20px 0 20px 150px; }
-      main .contacto .contacto__descripcion .mensaje a span {
-        margin-left: 20px; }
-      main .contacto .contacto__descripcion .mensaje a img {
-        width: 40px;
-        height: 40px; }
-    main .contacto .contacto__descripcion .mensaje .email {
-      grid-area: email; }
-    main .contacto .contacto__descripcion .mensaje .whatsapp {
-      grid-area: whatsapp; }
 
 @media (max-width: 480px) {
   .header {
@@ -456,21 +404,17 @@ main .contacto .contacto__descripcion {
         justify-self: center; }
   main .integrantes .integrantes__descripcion {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 850px;
-    border-top: 4px double wheat;
-    border-bottom: 4px double wheat;
-    background-color: #3a090a; }
+    justify-content: space-around; }
     main .integrantes .integrantes__descripcion .owl-carousel {
       width: 90%; }
     main .integrantes .integrantes__descripcion .owl-item {
       display: flex;
       justify-content: center; }
     main .integrantes .integrantes__descripcion .card {
-      width: 80%;
+      width: 100%;
       min-height: 620px;
-      padding: 20px; }
+      padding: 20px;
+      margin-bottom: 20px; }
       main .integrantes .integrantes__descripcion .card img {
         width: 150px;
         height: 150px;
@@ -482,16 +426,29 @@ main .contacto .contacto__descripcion {
         font-weight: 800; }
       main .integrantes .integrantes__descripcion .card .descripcion {
         text-align: center;
-        font-family: 'Cairo', sans-serif;
         font-size: 15px;
         line-height: 20px; }
+      main .integrantes .integrantes__descripcion .card:hover {
+        border: none; }
     main .integrantes .integrantes__descripcion .customPrevBtn,
     main .integrantes .integrantes__descripcion .customNextBtn {
-      text-align: center;
-      border-radius: 0%;
-      width: 40px;
-      height: 40px;
-      font-size: 30px; }
+      display: none; }
+    main .integrantes .integrantes__descripcion .owl-dots {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 30px; }
+      main .integrantes .integrantes__descripcion .owl-dots .owl-dot {
+        display: inline;
+        width: 10px;
+        height: 10px;
+        margin: 5px 7px;
+        background: #D6D6D6;
+        display: block;
+        transition: opacity .2s ease;
+        border-radius: 30px; }
+      main .integrantes .integrantes__descripcion .owl-dots .owl-dot.active {
+        background-color: wheat; }
   main .shows .parallaxShows {
     height: 30vh; }
     main .shows .parallaxShows .bcg3 {
@@ -520,4 +477,34 @@ main .contacto .contacto__descripcion {
     border-bottom: 4px double wheat;
     background-color: #3a090a; }
   .contacto {
-    display: none; } }
+    overflow: hidden; }
+    .contacto .parallaxContacto {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      padding: 150px 0;
+      color: #fff3dc;
+      background-color: #000;
+      overflow: hidden;
+      position: relative; }
+      .contacto .parallaxContacto .bcg4 {
+        background: url("../img/piano.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%; }
+      .contacto .parallaxContacto .content-wrapper h4 {
+        font-size: 50px; }
+  .contacto__descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px !important; }
+    .contacto__descripcion a span {
+      margin-left: 10px; }
+    .contacto__descripcion a img {
+      width: 20px;
+      height: 20px;
+      margin-left: 15px; } }

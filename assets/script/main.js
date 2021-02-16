@@ -75,3 +75,35 @@ $(document).ready(function() {
         owl.trigger('prev.owl.carousel', [500]);
     });
 });
+
+var menuToggle = $(".menuToggle");
+var checkbox = $("#check");
+
+function openMenu() {
+    menuToggle.css("display", "flex")
+        .animate({ height: "100vh" });
+}
+
+function closeMenu() {
+    menuToggle.animate({
+        height: "0vh"
+    });
+    checkbox.prop("checked", false);
+}
+
+checkbox.click(function() {
+    if (checkbox.prop('checked') == true) {
+        openMenu();
+    } else {
+        closeMenu();
+    }
+})
+
+$(".linkMenu").click(function() {
+    closeMenu();
+})
+
+
+
+//Obtiene la altura del navBar y le alplica la propiedad en css para que no se superpongan
+menuToggle.css('top', $(".navBar").height());

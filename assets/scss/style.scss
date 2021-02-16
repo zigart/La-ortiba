@@ -13,6 +13,24 @@ body {
     scroll-behavior: smooth;
 }
 
+@keyframes menuDespliegue {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100vh;
+    }
+}
+
+@keyframes menuRepliegue {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 0vh;
+    }
+}
+
 //*************************************HEADER********************************************
 .header {
     display: flex;
@@ -401,6 +419,37 @@ main {
         .navBar__desktop {
             display: none;
         }
+        .menuToggle {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height: 00vh;
+            background-color: wheat;
+            transition: 1s;
+            overflow: hidden;
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-self: center;
+                width: 100%;
+                height: 100%;
+                list-style: none;
+                li {
+                    margin-top: 40px;
+                    border-bottom: 2px solid $bordo;
+                    a {
+                        margin: 40px 0 0 20px;
+                        text-decoration: none;
+                        font-size: 18px;
+                        color: black;
+                    }
+                }
+            }
+        }
         label {
             display: block;
             grid-area: menu;
@@ -489,8 +538,9 @@ main {
                 }
                 .card {
                     width: 100%;
-                    min-height: 620px;
+                    min-height: 782px;
                     padding: 20px;
+                    margin-top: 20px;
                     margin-bottom: 20px;
                     img {
                         width: 150px;

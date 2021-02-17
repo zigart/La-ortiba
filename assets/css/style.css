@@ -42,6 +42,8 @@ body {
   width: 100%;
   height: 40px;
   background-color: #b7a735; }
+  .navBar #laOrtiba {
+    display: none; }
   .navBar label,
   .navBar input,
   .navBar .menuToggle {
@@ -88,7 +90,7 @@ main .quienesSomos .parallaxQuienesSomos {
     position: absolute;
     filter: brightness(65%) blur(2px);
     width: 100%;
-    height: 150%;
+    height: 190%;
     top: 0;
     z-index: 1;
     opacity: 1; }
@@ -100,7 +102,7 @@ main .quienesSomos .parallaxQuienesSomos {
     height: 100%;
     max-width: 1140px;
     position: relative;
-    font-size: 80px;
+    font-size: 70px;
     z-index: 2; }
     main .quienesSomos .parallaxQuienesSomos .content-wrapper h1 {
       display: flex;
@@ -202,13 +204,6 @@ main .integrantes .integrantes__descripcion {
   main .integrantes .integrantes__descripcion .card--5,
   main .integrantes .integrantes__descripcion .card--6 {
     transition: 400ms; }
-    main .integrantes .integrantes__descripcion .card--1:hover,
-    main .integrantes .integrantes__descripcion .card--2:hover,
-    main .integrantes .integrantes__descripcion .card--3:hover,
-    main .integrantes .integrantes__descripcion .card--4:hover,
-    main .integrantes .integrantes__descripcion .card--5:hover,
-    main .integrantes .integrantes__descripcion .card--6:hover {
-      border: 4px solid white; }
   main .integrantes .integrantes__descripcion .customPrevBtn,
   main .integrantes .integrantes__descripcion .customNextBtn {
     text-align: center;
@@ -333,7 +328,7 @@ main .contacto .contacto__descripcion {
       width: 40px;
       height: 40px; }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .header {
     display: flex;
     justify-content: center;
@@ -352,6 +347,8 @@ main .contacto .contacto__descripcion {
     grid-template-rows: 1fr;
     align-items: center;
     justify-items: start; }
+    .navBar #laOrtiba {
+      display: block; }
     .navBar .navBar__desktop {
       display: none; }
     .navBar .menuToggle {
@@ -469,8 +466,6 @@ main .contacto .contacto__descripcion {
         text-align: center;
         font-size: 15px;
         line-height: 20px; }
-      main .integrantes .integrantes__descripcion .card:hover {
-        border: none; }
     main .integrantes .integrantes__descripcion .customPrevBtn,
     main .integrantes .integrantes__descripcion .customNextBtn {
       display: none; }
@@ -549,3 +544,16 @@ main .contacto .contacto__descripcion {
       width: 20px;
       height: 20px;
       margin-left: 15px; } }
+
+@media (min-width: 321px) {
+  .card {
+    min-height: 680px !important; } }
+
+@media (min-width: 426px) {
+  .header {
+    height: 500px; }
+  .integrantes__descripcion {
+    min-height: auto !important; }
+    .integrantes__descripcion .card {
+      width: 75% !important;
+      min-height: 500px !important; } }

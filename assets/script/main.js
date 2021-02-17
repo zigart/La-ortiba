@@ -62,8 +62,9 @@ $(document).ready(function() {
         dots: true,
         responsive: {
             0: { items: 1 },
-            768: { items: 2 }
-        }
+            769: { items: 2, slideBy: 2 }
+        },
+
     });
 
 
@@ -88,6 +89,11 @@ function closeMenu() {
     menuToggle.animate({
         height: "0vh"
     });
+    checkbox.attr("disabled", true);
+    setTimeout(function() {
+        menuToggle.css("display", "none")
+        checkbox.attr("disabled", false);
+    }, 1500);
     checkbox.prop("checked", false);
 }
 

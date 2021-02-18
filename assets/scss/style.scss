@@ -117,7 +117,7 @@ main {
                 position: absolute;
                 filter: brightness(65%) blur(2px);
                 width: 100%;
-                height: 190%;
+                height: 100%;
                 top: 0;
                 z-index: 1;
                 opacity: 1;
@@ -136,6 +136,7 @@ main {
                     display: flex;
                     align-self: center;
                     justify-self: center;
+                    text-align: center;
                 }
             }
         }
@@ -174,7 +175,7 @@ main {
                 position: absolute;
                 filter: brightness(65%) blur(2px);
                 width: 100%;
-                height: 150%;
+                height: 100%;
                 top: 0;
                 z-index: 1;
                 opacity: 1;
@@ -283,7 +284,7 @@ main {
                 position: absolute;
                 filter: brightness(65%) blur(2px);
                 width: 100%;
-                height: 150%;
+                height: 100%;
                 top: 0;
                 z-index: 1;
                 opacity: 1;
@@ -332,7 +333,7 @@ main {
                 position: absolute;
                 filter: brightness(65%) blur(2px);
                 width: 100%;
-                height: 150%;
+                height: 100%;
                 top: 0;
                 z-index: 1;
                 opacity: 1;
@@ -468,14 +469,6 @@ main {
         .quienesSomos {
             .parallaxQuienesSomos {
                 height: 30vh;
-                .bcg1 {
-                    background: url("../img/fotoCelular.jpg");
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    width: 100%;
-                    height: 100%;
-                }
                 .content-wrapper {
                     display: flex;
                     align-items: center;
@@ -504,14 +497,6 @@ main {
         .integrantes {
             .parallaxIntegrantes {
                 height: 30vh;
-                .bcg2 {
-                    background: url("../img/foto2Celular.jpg");
-                    background-position: 20%;
-                    background-size: cover;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                }
                 .content-wrapper {
                     display: flex;
                     align-items: center;
@@ -591,14 +576,6 @@ main {
         .shows {
             .parallaxShows {
                 height: 30vh;
-                .bcg3 {
-                    background: url("../img/fotoCelular.jpg");
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    width: 100%;
-                    height: 100%;
-                }
                 .content-wrapper {
                     display: flex;
                     align-items: center;
@@ -635,14 +612,6 @@ main {
             background-color: #000;
             overflow: hidden;
             position: relative;
-            .bcg4 {
-                background: url("../img/piano.jpg");
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                width: 100%;
-                height: 100%;
-            }
             .content-wrapper {
                 h4 {
                     font-size: 50px;

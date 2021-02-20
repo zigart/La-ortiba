@@ -1,8 +1,62 @@
-var anchoVentana = $(window).width();
-
-
-
 $(document).ready(function() {
+
+    var anchoVentana = $(window).width();
+
+
+    function menu() {
+        var menuToggle = $(".menuToggle");
+        var checkbox = $("#check");
+
+
+
+        //Funciones a ejecutar cuando se clickea el menu para abrirlo
+        function openMenu() {
+            menuToggle.css("display", "flex")
+                .animate({ height: "100vh" });
+        }
+
+        //Funciones a ejecutar cuando se clickea el menu para cerrarlo
+        function closeMenu() {
+
+            menuToggle.animate({
+                height: "0vh"
+            });
+
+            checkbox.attr("disabled", true);
+
+            /*
+                Deshabilita el check y espera 1,5 segundos para que se cierre el menu 
+                y no se generen errores
+            */
+            setTimeout(function() {
+                menuToggle.css("display", "none")
+                checkbox.attr("disabled", false);
+            }, 1500);
+
+            //Rehabilita el check y le otorga la propiedad false
+            checkbox.prop("checked", false);
+        }
+
+
+        //Llamado a las funciones correspondientes
+        checkbox.click(function() {
+            if (checkbox.prop('checked') == true) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        })
+
+        $(".linkMenu").click(function() {
+            closeMenu();
+        })
+
+        //Obtiene la altura del navBar y le alplica la propiedad en css para que no se superpongan
+        menuToggle.css('top', $(".navBar").height());
+    }
+
+
+
 
 
 
@@ -89,56 +143,10 @@ $(document).ready(function() {
                 triggerHook: 2
             }).setTween(parallaxT4)
             .addTo(controller);
+
+        menu();
     } else {
-        var menuToggle = $(".menuToggle");
-        var checkbox = $("#check");
-
-
-
-        //Funciones a ejecutar cuando se clickea el menu para abrirlo
-        function openMenu() {
-            menuToggle.css("display", "flex")
-                .animate({ height: "100vh" });
-        }
-
-        //Funciones a ejecutar cuando se clickea el menu para cerrarlo
-        function closeMenu() {
-
-            menuToggle.animate({
-                height: "0vh"
-            });
-
-            checkbox.attr("disabled", true);
-
-            /*
-                Deshabilita el check y espera 1,5 segundos para que se cierre el menu 
-                y no se generen errores
-            */
-            setTimeout(function() {
-                menuToggle.css("display", "none")
-                checkbox.attr("disabled", false);
-            }, 1500);
-
-            //Rehabilita el check y le otorga la propiedad false
-            checkbox.prop("checked", false);
-        }
-
-
-        //Llamado a las funciones correspondientes
-        checkbox.click(function() {
-            if (checkbox.prop('checked') == true) {
-                openMenu();
-            } else {
-                closeMenu();
-            }
-        })
-
-        $(".linkMenu").click(function() {
-            closeMenu();
-        })
-
-        //Obtiene la altura del navBar y le alplica la propiedad en css para que no se superpongan
-        menuToggle.css('top', $(".navBar").height());
+        menu();
     }
 
 

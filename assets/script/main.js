@@ -5,80 +5,37 @@ var anchoVentana = $(window).width();
 $(document).ready(function() {
 
 
-    navegador = navigator.userAgent; //busco el "userAgent" del usuario.
-    console.log(navigator);
-    //lista de palabras del "userAgent" en los móviles
 
-    const userAgent = navigator.userAgent.toLowerCase();
+    //Busca en el navegador la version, windows, linux o mac
 
+    var navInfo = window.navigator.appVersion.toLowerCase();
+    var so = 'Sistema Operativo';
 
-
-    moviles = ["Mobile", "ipad", "tablet", "Android", "iPhone", "iPod", "BlackBerry", "Opera Mini", "Sony", "MOT", "Nokia", "samsung"];
-
-    detector = 0; //Variable que detectará si se usa un móvil
-
-    for (i in moviles) { //comprobar en la lista ...
-
-        //si el método "indexOf" no devuelve -1, indica que la palabra está en el "userAgent"
-
-        compruebo = navegador.indexOf(moviles[i]);
-
-        if (compruebo > -1) {
-
-            detector = 1; //Si es un móvil, cambio el valor del detector
-
+    //Mete en una variable el valor de Navinfo dependiendo lo que encuentre
+    function retornarSO() {
+        if (navInfo.indexOf('win') != -1) {
+            so = 'Windows';
+        } else if (navInfo.indexOf('linux') != -1) {
+            so = 'Linux';
+        } else if (navInfo.indexOf('mac') != -1) {
+            so = 'Macintosh';
         }
+        return so;
     }
-    if (detector == 1) {
 
-        var menuToggle = $(".menuToggle");
-        var checkbox = $("#check");
 
-        function openMenu() {
-            menuToggle.css("display", "flex")
-                .animate({ height: "100vh" });
+
+
+    //inicializa la funcion
+    retornarSO();
+
+
+    //Si en el 'so' se encontro alguno de estos dos valores ejecuta lo siguiente
+    if (so == "Windows" || so == "Macintosh") {
+
+        for (let i = 0; i <= 4; i++) {
+            $(".bcg" + i).css("height", "190%");
         }
-
-        function closeMenu() {
-
-            menuToggle.animate({
-                height: "0vh"
-            });
-
-            checkbox.attr("disabled", true);
-
-            setTimeout(function() {
-                menuToggle.css("display", "none")
-                checkbox.attr("disabled", false);
-            }, 1500);
-
-            checkbox.prop("checked", false);
-        }
-
-        checkbox.click(function() {
-            if (checkbox.prop('checked') == true) {
-                openMenu();
-            } else {
-                closeMenu();
-            }
-        })
-
-        $(".linkMenu").click(function() {
-            closeMenu();
-        })
-
-
-
-        //Obtiene la altura del navBar y le alplica la propiedad en css para que no se superpongan
-        menuToggle.css('top', $(".navBar").height());
-    } else {
-
-
-
-        $(".bcg1").css("height", "190%");
-        $(".bcg2").css("height", "190%");
-        $(".bcg3").css("height", "190%");
-        $(".bcg4").css("height", "190%");
 
         //Se inicia la libreria
         var controller = new ScrollMagic.Controller();
@@ -132,12 +89,62 @@ $(document).ready(function() {
                 triggerHook: 2
             }).setTween(parallaxT4)
             .addTo(controller);
+    } else {
+        var menuToggle = $(".menuToggle");
+        var checkbox = $("#check");
+
+
+
+        //Funciones a ejecutar cuando se clickea el menu para abrirlo
+        function openMenu() {
+            menuToggle.css("display", "flex")
+                .animate({ height: "100vh" });
+        }
+
+        //Funciones a ejecutar cuando se clickea el menu para cerrarlo
+        function closeMenu() {
+
+            menuToggle.animate({
+                height: "0vh"
+            });
+
+            checkbox.attr("disabled", true);
+
+            /*
+                Deshabilita el check y espera 1,5 segundos para que se cierre el menu 
+                y no se generen errores
+            */
+            setTimeout(function() {
+                menuToggle.css("display", "none")
+                checkbox.attr("disabled", false);
+            }, 1500);
+
+            //Rehabilita el check y le otorga la propiedad false
+            checkbox.prop("checked", false);
+        }
+
+
+        //Llamado a las funciones correspondientes
+        checkbox.click(function() {
+            if (checkbox.prop('checked') == true) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        })
+
+        $(".linkMenu").click(function() {
+            closeMenu();
+        })
+
+        //Obtiene la altura del navBar y le alplica la propiedad en css para que no se superpongan
+        menuToggle.css('top', $(".navBar").height());
     }
 
 
 
+    //Propiedades del carrousel de descripciones
     var owl = $('.owl-carousel');
-
     owl.owlCarousel({
         loop: true,
         items: 1,
@@ -148,7 +155,6 @@ $(document).ready(function() {
         },
 
     });
-
 
     $('.customNextBtn').click(function() {
         owl.trigger('next.owl.carousel', [500]);

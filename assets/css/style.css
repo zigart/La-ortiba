@@ -162,7 +162,6 @@ main .integrantes .integrantes__descripcion {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 850px;
   border-top: 4px double wheat;
   border-bottom: 4px double wheat;
   background-color: #3a090a; }
@@ -504,17 +503,19 @@ main .contacto .contacto__descripcion {
 
 @media (min-width: 321px) {
   .card {
-    min-height: 680px !important; } }
+    min-height: 680px; } }
 
 @media (min-width: 426px) {
   .header {
     height: 500px; }
   .integrantes__descripcion {
-    min-height: auto !important; }
+    min-height: auto; }
     .integrantes__descripcion .card {
       width: 75% !important;
-      min-height: 500px !important; } }
+      min-height: 500px; } }
 
 @media (min-width: 768px) {
   .header {
-    height: 100vh; } }
+    height: 100vh; }
+  .integrantes .integrantes__descripcion {
+    min-height: 1000px; } }

@@ -181,7 +181,6 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 850px;
       @include bordesContenedor;
       background-color: $bordo;
       .owl-carousel {
@@ -581,7 +580,7 @@ main {
 
 @media (min-width: 321px) {
   .card {
-    min-height: 680px !important;
+    min-height: 680px;
   }
 }
 
@@ -590,10 +589,10 @@ main {
     height: 500px;
   }
   .integrantes__descripcion {
-    min-height: auto !important;
+    min-height: auto;
     .card {
       width: 75% !important;
-      min-height: 500px !important;
+      min-height: 500px;
     }
   }
 }
@@ -601,5 +600,10 @@ main {
 @media (min-width: 768px) {
   .header {
     height: 100vh;
+  }
+  .integrantes {
+    .integrantes__descripcion {
+      min-height: 1000px;
+    }
   }
 }

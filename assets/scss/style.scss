@@ -1,657 +1,605 @@
-$bordo:#3a090a;
+@import "var_anim_mix.scss";
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    min-height: 2500px;
-    scroll-behavior: smooth;
-}
-
-@keyframes menuDespliegue {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: 100vh;
-    }
-}
-
-@keyframes menuRepliegue {
-    0% {
-        height: 100vh;
-    }
-    100% {
-        height: 0vh;
-    }
+  min-height: 2500px;
+  scroll-behavior: smooth;
 }
 
 //*************************************HEADER********************************************
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    .header__image {
-        width: 96%;
-        height: 96%;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  background-color: black;
+  .header__image {
+    @include sizes(100%, 100%);
+  }
 }
 
 //*************************************NAVBAR***********************************************
 .navBar {
-    z-index: 99;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  @include sizes(100%, 40px);
+  z-index: 99;
+  background-color: $menu;
+  #laOrtiba {
+    display: none;
+  }
+  label,
+  input,
+  .menuToggle {
+    display: none;
+  }
+  .navBar__desktop {
+    display: grid;
+    grid-template-areas: "nosotros integrantes shows contacto";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    list-style: none;
+    text-align: center;
     width: 100%;
-    height: 40px;
-    background-color: #b7a735;
-    #laOrtiba {
-        display: none;
+
+    a {
+      color: white;
+      text-decoration: none;
+      transition: 350ms;
+      font-weight: 800;
+      user-select: none;
+      &:hover {
+        color: $bordo;
+        cursor: pointer;
+      }
     }
-    label,
-    input,
-    .menuToggle {
-        display: none;
+    #quienesSomos {
+      grid-area: "nosotros";
     }
-    .navBar__desktop {
-        width: 100%;
-        display: grid;
-        grid-template-areas: "nosotros integrantes shows contacto";
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        align-items: center;
-        list-style: none;
-        text-align: center;
+    #integrantes {
+      grid-area: "shows";
+    }
+    #contacto {
+      grid-area: "contacto";
+    }
+  }
+  .menuToggle {
+    ul {
+      li {
+        display: none;
         a {
-            color: white;
-            text-decoration: none;
-            transition: 350ms;
-            font-weight: 800;
-            user-select: none;
-            &:hover {
-                color: $bordo;
-                cursor: pointer;
-            }
+          display: none;
         }
-        #quienesSomos {
-            grid-area: "nosotros";
-        }
-        #integrantes {
-            grid-area: "shows";
-        }
-        #contacto {
-            grid-area: "contacto";
-        }
+      }
     }
+  }
 }
 
 //**************************************MAIN****************************************************
 main {
-    //*********************************QUIENES SOMOS********************************************
-    .quienesSomos {
-        .parallaxQuienesSomos {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-            padding: 150px 0;
-            color: rgb(255, 243, 220);
-            background-color: #000;
-            overflow: hidden;
-            position: relative;
-            .bcg1 {
-                background: url("../img/foto.jpg");
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                filter: brightness(65%) blur(2px);
-                width: 100%;
-                height: 100%;
-                top: 0;
-                z-index: 1;
-                opacity: 1;
-            }
-            .content-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 90%;
-                height: 100%;
-                max-width: 1140px;
-                position: relative;
-                font-size: 70px;
-                z-index: 2;
-                h1 {
-                    display: flex;
-                    align-self: center;
-                    justify-self: center;
-                    text-align: center;
-                }
-            }
+  //*********************************QUIENES SOMOS********************************************
+  .quienesSomos {
+    .parallaxQuienesSomos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      height: 60vh;
+      padding: 150px 0;
+      color: $titulos;
+      background-color: #000;
+      .bcg1 {
+        background: url("../img/foto.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        @include sizes(100%, 100%);
+        @include filtro;
+      }
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include sizes(90%, 100%);
+        max-width: 1140px;
+        h1 {
+          display: flex;
+          align-self: center;
+          justify-self: center;
+          text-align: center;
+          font-size: 70px;
         }
-        .quienesSomos__descripcion {
-            display: flex;
-            line-height: 40px;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            text-align: center;
-            min-height: 200px;
-            padding: 30px;
-            font-size: 25px;
-            color: wheat;
-            background-color: $bordo;
-            border-top: 4px double wheat;
-            border-bottom: 4px double wheat;
-        }
+      }
     }
-    //****************************************INTEGRANTES******************************************
-    .integrantes {
-        .parallaxIntegrantes {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-            padding: 150px 0;
-            color: rgb(255, 243, 220);
-            background-color: #000;
-            overflow: hidden;
-            position: relative;
-            .bcg2 {
-                background: url("../img/foto2.jpg");
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                filter: brightness(65%) blur(2px);
-                width: 100%;
-                height: 100%;
-                top: 0;
-                z-index: 1;
-                opacity: 1;
-            }
-            .content-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 90%;
-                height: 100%;
-                max-width: 1140px;
-                position: relative;
-                font-size: 80px;
-                z-index: 2;
-                h2 {
-                    display: flex;
-                    align-self: center;
-                    justify-self: center;
-                }
-            }
-        }
-        .integrantes__descripcion {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 850px;
-            border-top: 4px double wheat;
-            border-bottom: 4px double wheat;
-            background-color: $bordo;
-            .owl-carousel {
-                width: 90%;
-            }
-            .owl-item {
-                display: flex;
-                justify-content: center;
-            }
-            .card {
-                display: flex;
-                flex-direction: column;
-                justify-content: start;
-                align-items: center;
-                width: 85%;
-                min-height: 680px;
-                background-color: wheat;
-                overflow: hidden;
-                padding: 20px;
-                margin: 0;
-                border: 2px double $bordo;
-                img {
-                    width: 200px;
-                    height: 200px;
-                    margin: 40px 0;
-                    border-radius: 100%;
-                }
-                .nombre {
-                    text-align: center;
-                    font-size: 30px;
-                    font-weight: 800;
-                }
-                .descripcion {
-                    text-align: center;
-                    font-family: 'Cairo', sans-serif;
-                }
-            }
-            .card--1,
-            .card--2,
-            .card--3,
-            .card--4,
-            .card--5,
-            .card--6 {
-                transition: 400ms;
-            }
-            .customPrevBtn,
-            .customNextBtn {
-                text-align: center;
-                border-radius: 100%;
-                border: 1px solid black;
-                width: 40px;
-                height: 40px;
-                font-size: 30px;
-                background-color: #b7a735;
-                outline: none;
-                cursor: pointer;
-            }
-            .owl-dots {
-                display: none;
-            }
-        }
+    .quienesSomos__descripcion {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 200px;
+      padding: 30px;
+      font-size: 25px;
+      text-align: center;
+      line-height: 40px;
+      color: $wheat;
+      background-color: $bordo;
+      @include bordesContenedor;
     }
-    //*****************************************SHOWS*********************************************
-    .shows {
-        .parallaxShows {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-            padding: 150px 0;
-            color: rgb(255, 243, 220);
-            background-color: #000;
-            overflow: hidden;
-            position: relative;
-            .bcg3 {
-                background: url("../img/foto.jpg");
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                filter: brightness(65%) blur(2px);
-                width: 100%;
-                height: 100%;
-                top: 0;
-                z-index: 1;
-                opacity: 1;
-            }
-            .content-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 90%;
-                height: 100%;
-                max-width: 1140px;
-                position: relative;
-                font-size: 80px;
-                z-index: 2;
-                h2 {
-                    display: flex;
-                    align-self: center;
-                    justify-self: center;
-                }
-            }
+  }
+  //****************************************INTEGRANTES******************************************
+  .integrantes {
+    .parallaxIntegrantes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      height: 60vh;
+      padding: 150px 0;
+      color: $titulos;
+      background-color: #000;
+      .bcg2 {
+        background: url("../img/foto2.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        @include sizes(100%, 100%);
+        @include filtro;
+      }
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include sizes(90%, 100%);
+        max-width: 1140px;
+        h2 {
+          display: flex;
+          align-self: center;
+          justify-self: center;
+          font-size: 80px;
         }
-        .shows__descripcion {
-            width: 100%;
-            height: 500px;
-            border-top: 4px double wheat;
-            border-bottom: 4px double wheat;
-            background-color: $bordo;
-        }
+      }
     }
-    //**************************************CONTACTO**********************************************
-    .contacto {
-        .parallaxContacto {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-            padding: 150px 0;
-            color: rgb(255, 243, 220);
-            background-color: #000;
-            overflow: hidden;
-            position: relative;
-            .bcg4 {
-                background: url("../img/piano.jpg");
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                filter: brightness(65%) blur(2px);
-                width: 100%;
-                height: 100%;
-                top: 0;
-                z-index: 1;
-                opacity: 1;
-            }
-            .content-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 90%;
-                height: 100%;
-                max-width: 1140px;
-                position: relative;
-                font-size: 80px;
-                z-index: 2;
-                h4 {
-                    display: flex;
-                    align-self: center;
-                    justify-self: center;
-                }
-            }
+    .integrantes__descripcion {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 850px;
+      @include bordesContenedor;
+      background-color: $bordo;
+      .owl-carousel {
+        width: 90%;
+      }
+      .owl-item {
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        overflow: hidden;
+        padding: 20px;
+        margin: 0;
+        width: 85%;
+        min-height: 680px;
+        background-color: $wheat;
+        img {
+          @include sizes(200px, 200px);
+          margin: 40px 0;
+          border-radius: 100%;
         }
-        .contacto__descripcion {
-            display: flex;
-            justify-content: space-around;
-            width: 100%;
-            height: 200px;
-            border-top: 4px double wheat;
-            border-bottom: 4px double wheat;
-            background-color: $bordo;
-            color: white;
-            a {
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: white;
-                span {
-                    margin-left: 10px;
-                }
-                img {
-                    width: 40px;
-                    height: 40px;
-                }
-            }
-            a {
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: white;
-                margin: 20px 0 20px 0px;
-                span {
-                    margin-left: 10px;
-                }
-                img {
-                    width: 40px;
-                    height: 40px;
-                }
-            }
+        .nombre {
+          text-align: center;
+          font-size: 30px;
+          font-weight: 800;
         }
+        .descripcion {
+          text-align: center;
+          font-family: "Cairo", sans-serif;
+        }
+      }
+      .card--1,
+      .card--2,
+      .card--3,
+      .card--4,
+      .card--5,
+      .card--6 {
+        transition: 400ms;
+      }
+      .customPrevBtn,
+      .customNextBtn {
+        @include sizes(40px, 40px);
+        text-align: center;
+        font-size: 30px;
+        border-radius: 100%;
+        outline: none;
+        cursor: pointer;
+        border: 1px solid black;
+        background-color: $menu;
+      }
+      .owl-dots {
+        display: none;
+      }
     }
+  }
+  //*****************************************SHOWS*********************************************
+  .shows {
+    .parallaxShows {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 150px 0;
+      height: 60vh;
+      color: $titulos;
+      background-color: #000;
+      .bcg3 {
+        background: url("../img/foto.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        @include sizes(100%, 100%);
+        @include filtro;
+      }
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include sizes(90%, 100%);
+        max-width: 1140px;
+        h3 {
+          display: flex;
+          align-self: center;
+          justify-self: center;
+          font-size: 80px;
+        }
+      }
+    }
+    .shows__descripcion {
+      @include sizes(100%, 500px);
+      @include bordesContenedor;
+      background-color: $bordo;
+    }
+  }
+  //**************************************CONTACTO**********************************************
+  .contacto {
+    .parallaxContacto {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 150px 0;
+      height: 60vh;
+      color: $titulos;
+      background-color: #000;
+      .bcg4 {
+        background: url("../img/piano.jpg");
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        @include sizes(100%, 100%);
+        @include filtro;
+      }
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        @include sizes(90%, 100%);
+        max-width: 1140px;
+        h4 {
+          display: flex;
+          align-self: center;
+          justify-self: center;
+          font-size: 80px;
+        }
+      }
+    }
+    .contacto__descripcion {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 200px;
+      @include bordesContenedor;
+      background-color: $bordo;
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        span {
+          margin-left: 10px;
+        }
+        img {
+          @include sizes(40px, 40px);
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin: 20px 0 20px 0px;
+        color: white;
+        span {
+          margin-left: 10px;
+        }
+        img {
+          @include sizes(40px, 40px);
+        }
+      }
+    }
+  }
 }
 
 //responsive
 @media (max-width: 768px) {
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 300px;
-        background-color: black;
-        .header__image {
-            width: 100%;
-            height: auto;
-        }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include sizes(100%, 300px);
+    background-color: black;
+    .header__image {
+      @include sizes(100%, auto);
     }
-    .navBar {
-        height: 35px;
-        display: grid;
-        grid-template-areas: "menu texto none";
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        align-items: center;
-        justify-items: start;
-        #laOrtiba {
-            display: block;
-        }
-        .navBar__desktop {
-            display: none;
-        }
-        .menuToggle {
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            top: 0;
-            position: absolute;
-            width: 100%;
-            height: 00vh;
-            background-color: wheat;
-            transition: 1s;
-            overflow: hidden;
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: start;
-                align-self: center;
-                width: 100%;
-                height: 100%;
-                list-style: none;
-                li {
-                    margin-top: 40px;
-                    border-bottom: 2px solid $bordo;
-                    padding: 10px;
-                    a {
-                        margin-left: 20px;
-                        text-decoration: none;
-                        font-size: 18px;
-                        color: black;
-                    }
-                }
-            }
-        }
-        label {
-            display: block;
-            grid-area: menu;
-            margin-left: 8px;
-        }
-        span {
-            grid-area: texto;
-            justify-self: center;
-        }
+  }
+  .navBar {
+    display: grid;
+    grid-template-areas: "menu texto none";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: start;
+    height: 35px;
+    #laOrtiba {
+      display: block;
     }
-    main {
-        .quienesSomos {
-            .parallaxQuienesSomos {
-                height: 30vh;
-                .content-wrapper {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 90%;
-                    height: 100%;
-                    max-width: 440px;
-                    position: relative;
-                    font-size: 80px;
-                    z-index: 2;
-                    h1 {
-                        display: flex;
-                        font-size: 40px;
-                        align-self: center;
-                        justify-self: center;
-                        text-align: center;
-                    }
-                }
-            }
-            .quienesSomos__descripcion {
-                line-height: 30px;
-                padding: 10px;
-                font-size: 20px;
-            }
-        }
-        .integrantes {
-            .parallaxIntegrantes {
-                height: 30vh;
-                .content-wrapper {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 90%;
-                    height: 100%;
-                    max-width: 1140px;
-                    position: relative;
-                    font-size: 80px;
-                    z-index: 2;
-                    h2 {
-                        font-size: 40px;
-                        display: flex;
-                        align-self: center;
-                        justify-self: center;
-                    }
-                }
-            }
-            .integrantes__descripcion {
-                display: flex;
-                justify-content: space-around;
-                .owl-carousel {
-                    width: 90%;
-                }
-                .owl-item {
-                    display: flex;
-                    justify-content: center;
-                }
-                .card {
-                    width: 100%;
-                    min-height: 782px;
-                    padding: 20px;
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                    img {
-                        width: 150px;
-                        height: 150px;
-                        margin: 40px 0;
-                        border-radius: 100%;
-                    }
-                    .nombre {
-                        text-align: center;
-                        font-size: 25px;
-                        font-weight: 800;
-                    }
-                    .descripcion {
-                        text-align: center;
-                        font-size: 15px;
-                        line-height: 20px;
-                    }
-                }
-                .customPrevBtn,
-                .customNextBtn {
-                    display: none;
-                }
-                .owl-dots {
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    height: 30px;
-                    .owl-dot {
-                        display: inline;
-                        width: 10px;
-                        height: 10px;
-                        margin: 5px 7px;
-                        background: #D6D6D6;
-                        display: block;
-                        transition: opacity .2s ease;
-                        border-radius: 30px;
-                    }
-                    .owl-dot.active {
-                        background-color: wheat;
-                    }
-                }
-            }
-        }
-        .shows {
-            .parallaxShows {
-                height: 30vh;
-                .content-wrapper {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 90%;
-                    height: 100%;
-                    max-width: 1140px;
-                    position: relative;
-                    font-size: 80px;
-                    z-index: 2;
-                    h3 {
-                        font-size: 50px;
-                    }
-                }
-            }
-            .shows__descripcion {
-                width: 100%;
-                height: 500px;
-                border-top: 4px double wheat;
-                border-bottom: 4px double wheat;
-                background-color: $bordo;
-            }
-        }
+    .navBar__desktop {
+      display: none;
     }
-    .contacto {
-        overflow: hidden;
-        .parallaxContacto {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-            padding: 150px 0;
-            color: rgb(255, 243, 220);
-            background-color: #000;
-            overflow: hidden;
-            position: relative;
-            .content-wrapper {
-                h4 {
-                    font-size: 50px;
-                }
-            }
-        }
-    }
-    .contacto__descripcion {
+    .menuToggle {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+      @include sizes(100%, 0);
+      background-color: $wheat;
+      transition: 1s;
+      ul {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        height: 400px !important;
-        a {
-            span {
-                margin-left: 10px;
-            }
-            img {
-                width: 20px;
-                height: 20px;
-                margin-left: 15px;
-            }
+        justify-content: start;
+        align-self: center;
+        @include sizes(100%, 100%);
+        list-style: none;
+        li {
+          display: block;
+          margin-top: 40px;
+          border-bottom: 2px solid $bordo;
+          padding: 10px;
+          a {
+            display: block;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+          }
         }
+      }
     }
+    label {
+      display: block;
+      grid-area: menu;
+      margin-left: 8px;
+    }
+    span {
+      grid-area: texto;
+      justify-self: center;
+    }
+  }
+  main {
+    .quienesSomos {
+      .parallaxQuienesSomos {
+        height: 30vh;
+        .content-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          @include sizes(90%, 100%);
+          max-width: 440px;
+          h1 {
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+            font-size: 40px;
+          }
+        }
+      }
+      .quienesSomos__descripcion {
+        line-height: 30px;
+        padding: 10px;
+        font-size: 20px;
+      }
+    }
+    .integrantes {
+      .parallaxIntegrantes {
+        height: 30vh;
+        .content-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          @include sizes(90%, 100%);
+          max-width: 1140px;
+          h2 {
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            font-size: 40px;
+          }
+        }
+      }
+      .integrantes__descripcion {
+        display: flex;
+        justify-content: space-around;
+        .owl-carousel {
+          width: 90%;
+        }
+        .owl-item {
+          display: flex;
+          justify-content: center;
+        }
+        .card {
+          width: 100%;
+          min-height: 782px;
+          padding: 20px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          img {
+            @include sizes(150px, 150px);
+            margin: 40px 0;
+            border-radius: 100%;
+          }
+          .nombre {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 800;
+          }
+          .descripcion {
+            text-align: center;
+            font-size: 15px;
+            line-height: 20px;
+          }
+        }
+        .customPrevBtn,
+        .customNextBtn {
+          display: none;
+        }
+        .owl-dots {
+          display: flex;
+          justify-content: center;
+          @include sizes(100%, 30px);
+          .owl-dot {
+            display: inline;
+            @include sizes(10px, 10px);
+            margin: 5px 7px;
+            background: #d6d6d6;
+            transition: opacity 0.2s ease;
+            border-radius: 30px;
+          }
+          .owl-dot.active {
+            background-color: $wheat;
+          }
+        }
+      }
+    }
+    .shows {
+      .parallaxShows {
+        height: 30vh;
+        .content-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          @include sizes(90%, 100%);
+          max-width: 1140px;
+          h3 {
+            font-size: 50px;
+          }
+        }
+      }
+      .shows__descripcion {
+        @include sizes(100%, 500px);
+        @include bordesContenedor;
+        background-color: $bordo;
+      }
+    }
+  }
+  .contacto {
+    overflow: hidden;
+    .parallaxContacto {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      height: 60vh;
+      padding: 150px 0;
+      color: $titulos;
+      background-color: #000;
+      .content-wrapper {
+        h4 {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+  .contacto__descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px !important;
+    a {
+      span {
+        margin-left: 10px;
+      }
+      img {
+        @include sizes(20px, 20px);
+        margin-left: 15px;
+      }
+    }
+  }
 }
 
 @media (min-width: 321px) {
-    .card {
-        min-height: 680px !important;
-    }
+  .card {
+    min-height: 680px !important;
+  }
 }
 
-@media(min-width: 426px) {
-    .header {
-        height: 500px;
+@media (min-width: 426px) {
+  .header {
+    height: 500px;
+  }
+  .integrantes__descripcion {
+    min-height: auto !important;
+    .card {
+      width: 75% !important;
+      min-height: 500px !important;
     }
-    .integrantes__descripcion {
-        min-height: auto !important;
-        .card {
-            width: 75% !important;
-            min-height: 500px !important;
-        }
-    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 100vh;
+  }
 }

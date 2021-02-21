@@ -12,13 +12,16 @@ $(document).ready(function() {
         //Funciones a ejecutar cuando se clickea el menu para abrirlo
         function openMenu() {
             menuToggle.css("display", "flex")
+             //Obtiene la altura del navBar y le alplica la propiedad en css para que no se superpongan
+                .css('top', $(".navBar").height())
                 .animate({ height: "100vh" });
         }
 
         //Funciones a ejecutar cuando se clickea el menu para cerrarlo
         function closeMenu() {
 
-            menuToggle.animate({
+            menuToggle
+            .animate({
                 height: "0vh"
             });
 
@@ -51,8 +54,7 @@ $(document).ready(function() {
             closeMenu();
         })
 
-        //Obtiene la altura del navBar y le alplica la propiedad en css para que no se superpongan
-        menuToggle.css('top', $(".navBar").height());
+       
     }
 
 

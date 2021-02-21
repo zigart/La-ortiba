@@ -6,6 +6,20 @@
 
 html {
   scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgb(36, 36, 36);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 22px;
+    background-color: $wheat;
+    border: 1px solid black;
+  }
+  &::-webkit-scrollbar-corner {
+    border-radius: 22px;
+  }
 }
 
 body {
@@ -19,7 +33,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-
   background-color: black;
   .header__image {
     @include sizes(100%, 100%);
@@ -314,7 +327,6 @@ main {
           display: flex;
           align-self: center;
           justify-self: center;
-          font-size: 80px;
         }
       }
     }
@@ -604,6 +616,13 @@ main {
   .integrantes {
     .integrantes__descripcion {
       min-height: 1000px;
+    }
+  }
+  .contacto {
+    .content-wrapper {
+      h4 {
+        font-size: 80px;
+      }
     }
   }
 }

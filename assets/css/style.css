@@ -16,6 +16,16 @@
 
 html {
   scroll-behavior: smooth; }
+  html::-webkit-scrollbar {
+    width: 10px; }
+  html::-webkit-scrollbar-track {
+    background-color: #242424; }
+  html::-webkit-scrollbar-thumb {
+    border-radius: 22px;
+    background-color: wheat;
+    border: 1px solid black; }
+  html::-webkit-scrollbar-corner {
+    border-radius: 22px; }
 
 body {
   min-height: 2500px;
@@ -284,8 +294,7 @@ main .contacto .parallaxContacto {
     main .contacto .parallaxContacto .content-wrapper h4 {
       display: flex;
       align-self: center;
-      justify-self: center;
-      font-size: 80px; }
+      justify-self: center; }
 
 main .contacto .contacto__descripcion {
   display: flex;
@@ -518,4 +527,6 @@ main .contacto .contacto__descripcion {
   .header {
     height: 100vh; }
   .integrantes .integrantes__descripcion {
-    min-height: 1000px; } }
+    min-height: 1000px; }
+  .contacto .content-wrapper h4 {
+    font-size: 80px; } }

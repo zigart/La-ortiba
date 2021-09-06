@@ -1,5 +1,6 @@
 @import "var_anim_mix.scss";
 @import "colors.scss";
+@import "responsive.scss";
 * {
   margin: 0;
   padding: 0;
@@ -121,7 +122,7 @@ main {
         background-size: cover;
         position: absolute;
         top: 0;
-        @include sizes(100%, 150%);
+        
         @include filtro;
       }
       .content-wrapper {
@@ -420,6 +421,7 @@ main {
             margin-left: 20px;
             text-decoration: none;
             font-size: 18px;
+            
             color: black;
           }
         }
@@ -590,14 +592,33 @@ main {
     }
   }
 }
+// Responsive
 
-@media (min-width: 321px) {
+@media (min-width: 0) {
+
+  .quienesSomos{
+    .parallaxQuienesSomos{
+        .bcg1{
+          @include sizes(100%,150%);
+        }
+    }
+  }
   .card {
     min-height: 680px;
   }
 }
 
 @media (min-width: 426px) {
+
+
+  .quienesSomos{
+    .parallaxQuienesSomos{
+        .bcg1{
+          @include sizes(100%,150%);
+        }
+    }
+  }
+
   .header {
     height: 500px;
   }
@@ -614,6 +635,14 @@ main {
   .header {
     height: 100vh;
   }
+
+  .quienesSomos{
+    .parallaxQuienesSomos{
+        .bcg1{
+          @include sizes(100%,150%);
+        }
+    }
+  }
   .integrantes {
     .integrantes__descripcion {
       min-height: 1000px;
@@ -624,6 +653,16 @@ main {
       h4 {
         font-size: 80px;
       }
+    }
+  }
+}
+
+@media(min-width: 1024px){
+  .quienesSomos{
+    .parallaxQuienesSomos{
+        .bcg1{
+          @include sizes(100%, 150%);
+        }
     }
   }
 }

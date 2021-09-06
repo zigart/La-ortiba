@@ -1,0 +1,45 @@
+@import "var_anim_mix.scss";
+
+@media (min-width: 321px) {
+    .quienesSomos{
+        .parallaxQuienesSomos{
+            .bcg1{
+                @include sizes(1%, 80%);
+            }
+        }
+    }
+    .card {
+      min-height: 680px;
+    }
+  }
+  
+  @media (min-width: 426px) {
+    .header {
+      height: 500px;
+    }
+    .integrantes__descripcion {
+      min-height: auto;
+      .card {
+        width: 75% !important;
+        min-height: 500px;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .header {
+      height: 100vh;
+    }
+    .integrantes {
+      .integrantes__descripcion {
+        min-height: 1000px;
+      }
+    }
+    .contacto {
+      .content-wrapper {
+        h4 {
+          font-size: 80px;
+        }
+      }
+    }
+  }

@@ -103,7 +103,7 @@ main .quienesSomos .parallaxQuienesSomos {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 150%;
     filter: brightness(65%) blur(2px); }
   main .quienesSomos .parallaxQuienesSomos .content-wrapper {
     display: flex;
@@ -152,7 +152,7 @@ main .integrantes .parallaxIntegrantes {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 150%;
     filter: brightness(65%) blur(2px); }
   main .integrantes .parallaxIntegrantes .content-wrapper {
     display: flex;
@@ -241,7 +241,7 @@ main .shows .parallaxShows {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 150%;
     filter: brightness(65%) blur(2px); }
   main .shows .parallaxShows .content-wrapper {
     display: flex;
@@ -281,7 +281,7 @@ main .contacto .parallaxContacto {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 150%;
     filter: brightness(65%) blur(2px); }
   main .contacto .parallaxContacto .content-wrapper {
     display: flex;

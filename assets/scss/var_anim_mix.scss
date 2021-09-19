@@ -20,8 +20,8 @@
 
 //mixings
 @mixin bordesContenedor {
-  border-top: 4px double $wheat;
-  border-bottom: 4px double $wheat;
+  border-top: 4px double var(--wheat);
+  border-bottom: 4px double var(--wheat);
 }
 
 @mixin sizes($width, $height) {

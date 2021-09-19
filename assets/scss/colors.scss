@@ -1,13 +1,28 @@
 //light mode
+:root{
+    --menu: #b7a735;
+    --wheat: wheat;
+    --bordo: #3a090a;
+    --titulos: #fff3dc;
+}
 
-$menu: #b7a735;
-$wheat: wheat;
-$bordo: #3a090a;
-$titulos: #fff3dc;
+@media (prefers-color-scheme: light){
+    :root{
+        --menu: #b7a735;
+        --wheat: wheat;
+        --bordo: #3a090a;
+        --titulos: #fff3dc;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --menu: #b7a735;
+        --wheat: wheat;
+        --bordo:  #3a090a;
+        --titulos: #fff3dc;
+    }
+}
 
 //dark mode
 
-$menuDark: rgb(98, 233, 109);
-$wheatDark: rgb(255, 231, 185);
-$bordoDark: #530f10;
-$titulosDark: #fff5e3;

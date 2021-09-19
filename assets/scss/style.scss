@@ -1,6 +1,8 @@
 @import "var_anim_mix.scss";
-@import "colors.scss";
 @import "responsive.scss";
+@import "colors.scss";
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +18,7 @@ html {
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 22px;
-    background-color: $wheat;
+    background-color: var(--wheat);
     border: 1px solid black;
   }
   &::-webkit-scrollbar-corner {
@@ -50,7 +52,7 @@ body {
   top: 0;
   @include sizes(100%, 40px);
   z-index: 99;
-  background-color: $menu;
+  background-color: var(--menu);
   #laOrtiba {
     display: none;
   }
@@ -76,7 +78,7 @@ body {
       font-weight: 800;
       user-select: none;
       &:hover {
-        color: $bordo;
+        color: var(--bordo);
         cursor: pointer;
       }
     }
@@ -114,7 +116,7 @@ main {
       overflow: hidden;
       height: 60vh;
       padding: 150px 0;
-      color: $titulos;
+      color: var(--titulos);
       background-color: #000;
       .bcg1 {
         background: url("../img/foto.jpg");
@@ -151,8 +153,8 @@ main {
       font-size: 25px;
       text-align: center;
       line-height: 40px;
-      color: $wheat;
-      background-color: $bordo;
+      color: var(--wheat);
+      background-color: var(--bordo);
       @include bordesContenedor;
     }
   }
@@ -166,7 +168,7 @@ main {
       overflow: hidden;
       height: 60vh;
       padding: 150px 0;
-      color: $titulos;
+      color: var(--titulos);
       background-color: #000;
       .bcg2 {
         background: url("../img/foto2.jpg");
@@ -197,7 +199,7 @@ main {
       justify-content: center;
       align-items: center;
       @include bordesContenedor;
-      background-color: $bordo;
+      background-color: var(--bordo);
       .owl-carousel {
         width: 90%;
       }
@@ -215,7 +217,7 @@ main {
         margin: 0;
         width: 85%;
         min-height: 680px;
-        background-color: $wheat;
+        background-color: var(--wheat);
         img {
           @include sizes(200px, 200px);
           margin: 40px 0;
@@ -248,7 +250,7 @@ main {
         outline: none;
         cursor: pointer;
         border: 1px solid black;
-        background-color: $menu;
+        background-color: var(--menu);
       }
       .owl-dots {
         display: none;
@@ -265,7 +267,7 @@ main {
       overflow: hidden;
       padding: 150px 0;
       height: 60vh;
-      color: $titulos;
+      color: var(--titulos);
       background-color: #000;
       .bcg3 {
         background: url("../img/foto.jpg");
@@ -294,7 +296,7 @@ main {
     .shows__descripcion {
       @include sizes(100%, 500px);
       @include bordesContenedor;
-      background-color: $bordo;
+      background-color: var(--bordo);
     }
   }
   //**************************************CONTACTO**********************************************
@@ -307,7 +309,7 @@ main {
       overflow: hidden;
       padding: 150px 0;
       height: 60vh;
-      color: $titulos;
+      color: var(--titulos);
       background-color: #000;
       .bcg4 {
         background: url("../img/piano.jpg");
@@ -338,7 +340,7 @@ main {
       width: 100%;
       height: 200px;
       @include bordesContenedor;
-      background-color: $bordo;
+      background-color: var(--bordo);
       a {
         display: flex;
         align-items: center;
@@ -402,7 +404,7 @@ main {
       top: 0;
       overflow: hidden;
       @include sizes(100%, 0);
-      background-color: $wheat;
+      background-color: var(--wheat);
       transition: 1s;
       ul {
         display: flex;
@@ -414,7 +416,7 @@ main {
         li {
           display: block;
           margin-top: 40px;
-          border-bottom: 2px solid $bordo;
+          border-bottom: 2px solid var(--bordo);
           padding: 10px;
           a {
             display: block;
@@ -530,7 +532,7 @@ main {
             border-radius: 30px;
           }
           .owl-dot.active {
-            background-color: $wheat;
+            background-color: var(--wheat);
           }
         }
       }
@@ -553,7 +555,7 @@ main {
       .shows__descripcion {
         @include sizes(100%, 500px);
         @include bordesContenedor;
-        background-color: $bordo;
+        background-color: var(--bordo);
       }
     }
   }
@@ -567,7 +569,7 @@ main {
       position: relative;
       height: 60vh;
       padding: 150px 0;
-      color: $titulos;
+      color: var(--titulos);
       background-color: #000;
       .content-wrapper {
         h4 {
@@ -593,13 +595,7 @@ main {
   }
 }
 
-//dark mode
 
-@media (prefers-color-scheme: light) {
- .navBar{
-   background-color: $menuDark;
- }
-}
 
 // Responsive
 

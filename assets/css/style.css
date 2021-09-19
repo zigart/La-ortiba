@@ -544,6 +544,10 @@ main .contacto .contacto__descripcion {
       height: 20px;
       margin-left: 15px; } }
 
+@media (prefers-color-scheme: dark) {
+  .navBar {
+    background-color: #e9d962; } }
+
 @media (min-width: 0) {
   .quienesSomos .parallaxQuienesSomos .bcg1 {
     width: 100%;

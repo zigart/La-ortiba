@@ -595,7 +595,11 @@ main {
 
 //dark mode
 
-@media (prefers-color-scheme: dark) {}
+@media (prefers-color-scheme: dark) {
+ .navBar{
+   background-color: $menuDark;
+ }
+}
 
 // Responsive
 

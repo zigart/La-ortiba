@@ -592,6 +592,11 @@ main {
     }
   }
 }
+
+//dark mode
+
+@media (prefers-color-scheme: dark) {}
+
 // Responsive
 
 @media (min-width: 0) {

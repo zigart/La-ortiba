@@ -546,7 +546,7 @@ main .contacto .contacto__descripcion {
 
 @media (prefers-color-scheme: dark) {
   .navBar {
-    background-color: #e9d962; } }
+    background-color: #62e96d; } }
 
 @media (min-width: 0) {
   .quienesSomos .parallaxQuienesSomos .bcg1 {

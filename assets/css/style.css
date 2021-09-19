@@ -544,7 +544,7 @@ main .contacto .contacto__descripcion {
       height: 20px;
       margin-left: 15px; } }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   .navBar {
     background-color: #62e96d; } }
 

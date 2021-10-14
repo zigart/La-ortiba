@@ -1,10 +1,13 @@
 //light mode
-:root{
-    --menu: #b7a735;
-    --wheat: wheat;
-    --bordo: #3a090a;
-    --titulos: #fff3dc;
+@media (prefers-color-scheme: no-prefer){
+    :root{
+        --menu: #b7a735;
+        --wheat: wheat;
+        --bordo: #3a090a;
+        --titulos: #fff3dc;
+    }
 }
+
 
 @media (prefers-color-scheme: light){
     :root{
@@ -20,7 +23,7 @@
         --menu: #b7a735;
         --wheat: wheat;
         --bordo:  #3a090a;
-        --titulos: #fff3dc;
+        --titulos: #fff5e3;
     }
 }
 

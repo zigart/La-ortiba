@@ -1,10 +1,28 @@
 @import "var_anim_mix.scss";
 
+@media (min-width: 0) {
+  .header{
+    height: 100vh
+  }
+  .quienesSomos{
+    .parallaxQuienesSomos{
+        @include sizes(100%,100%);
+        .bcg1{
+          @include sizes(100%,100%);
+        }
+    }
+  }
+  .card {
+    min-height: 680px;
+  }
+}
+
+
 @media (min-width: 321px) {
     .quienesSomos{
         .parallaxQuienesSomos{
             .bcg1{
-                @include sizes(1%, 80%);
+              background-size: 100vw 100%;
             }
         }
     }
@@ -14,6 +32,14 @@
   }
   
   @media (min-width: 426px) {
+    .quienesSomos{
+      .parallaxQuienesSomos{
+          .bcg1{
+            @include sizes(100%,150%);
+          }
+      }
+    }
+  
     .header {
       height: 500px;
     }
@@ -26,9 +52,27 @@
     }
   }
   
+
+  
+
+
+
+
+
+
+
+
   @media (min-width: 768px) {
     .header {
       height: 100vh;
+    }
+  
+    .quienesSomos{
+      .parallaxQuienesSomos{
+          .bcg1{
+            @include sizes(100%,150%);
+          }
+      }
     }
     .integrantes {
       .integrantes__descripcion {
@@ -40,6 +84,16 @@
         h4 {
           font-size: 80px;
         }
+      }
+    }
+  }
+  
+  @media(min-width: 1024px){
+    .quienesSomos{
+      .parallaxQuienesSomos{
+          .bcg1{
+            @include sizes(100%, 150%);
+          }
       }
     }
   }

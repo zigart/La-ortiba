@@ -19,12 +19,10 @@ $(document).ready(function() {
 
         //Funciones a ejecutar cuando se clickea el menu para cerrarlo
         function closeMenu() {
-
             menuToggle
             .animate({
                 height: "0vh"
             });
-
             checkbox.attr("disabled", true);
 
             /*
@@ -53,14 +51,7 @@ $(document).ready(function() {
         $(".linkMenu").click(function() {
             closeMenu();
         })
-
-       
     }
-
-
-        // for (let i = 0; i <= 4; i++) {
-        //     $(".bcg" + i).css("height", "190%");
-        // }
 
         function react(image){
             let getYposition = image.getBoundingClientRect().y;
@@ -72,8 +63,9 @@ $(document).ready(function() {
         const bcg4 = document.querySelector('.bcg4');
 
         function scrollParallax(bcg){
-            let scrollBcg = bcg.getBoundingClientRect().y - window.innerHeight;
-            bcg.style.transform = "translateY("+  scrollBcg * 0.2+ "px)";
+            let scrollBcg = bcg.getBoundingClientRect().top - window.innerHeight;
+            bcg.style.transform = "translateY("+  scrollBcg * 0.1+ "px)";
+            console.log(scrollBcg);
         }
 
         window.onscroll = function(){

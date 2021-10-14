@@ -371,12 +371,13 @@ main {
 }
 
 //responsive
+
 @media (max-width: 768px) {
   .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    @include sizes(100%, 300px);
+    @include sizes(100%, 100vh);
     background-color: black;
     .header__image {
       @include sizes(100%, auto);
@@ -443,6 +444,9 @@ main {
     .quienesSomos {
       .parallaxQuienesSomos {
         height: 30vh;
+        .bcg1{
+          @include sizes(100%, 140%);
+        }
         .content-wrapper {
           display: flex;
           align-items: center;
@@ -468,6 +472,9 @@ main {
     .integrantes {
       .parallaxIntegrantes {
         height: 30vh;
+        .bcg2{
+          @include sizes(100%, 140%);
+        }
         .content-wrapper {
           display: flex;
           align-items: center;
@@ -540,6 +547,9 @@ main {
     .shows {
       .parallaxShows {
         height: 30vh;
+        .bcg3{
+          @include sizes(100%, 140%);
+        }
         .content-wrapper {
           display: flex;
           align-items: center;
@@ -571,6 +581,9 @@ main {
       padding: 150px 0;
       color: var(--titulos);
       background-color: #000;
+      .bcg4{
+        @include sizes(100%, 140%);
+      }
       .content-wrapper {
         h4 {
           font-size: 50px;
@@ -599,75 +612,4 @@ main {
 
 // Responsive
 
-@media (min-width: 0) {
 
-  .quienesSomos{
-    .parallaxQuienesSomos{
-        .bcg1{
-          @include sizes(100%,150%);
-        }
-    }
-  }
-  .card {
-    min-height: 680px;
-  }
-}
-
-@media (min-width: 426px) {
-
-
-  .quienesSomos{
-    .parallaxQuienesSomos{
-        .bcg1{
-          @include sizes(100%,150%);
-        }
-    }
-  }
-
-  .header {
-    height: 500px;
-  }
-  .integrantes__descripcion {
-    min-height: auto;
-    .card {
-      width: 75% !important;
-      min-height: 500px;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .header {
-    height: 100vh;
-  }
-
-  .quienesSomos{
-    .parallaxQuienesSomos{
-        .bcg1{
-          @include sizes(100%,150%);
-        }
-    }
-  }
-  .integrantes {
-    .integrantes__descripcion {
-      min-height: 1000px;
-    }
-  }
-  .contacto {
-    .content-wrapper {
-      h4 {
-        font-size: 80px;
-      }
-    }
-  }
-}
-
-@media(min-width: 1024px){
-  .quienesSomos{
-    .parallaxQuienesSomos{
-        .bcg1{
-          @include sizes(100%, 150%);
-        }
-    }
-  }
-}

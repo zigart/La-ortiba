@@ -561,7 +561,7 @@ main .contacto .contacto__descripcion {
       justify-content: center; }
     main .integrantes .integrantes__descripcion .card {
       width: 100%;
-      min-height: 782px;
+      min-height: 500px;
       padding: 20px;
       margin-top: 20px;
       margin-bottom: 20px; }

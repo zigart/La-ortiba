@@ -220,12 +220,10 @@ main .quienesSomos .parallaxQuienesSomos {
   main .quienesSomos .parallaxQuienesSomos .bcg1 {
     background: url("../img/foto2.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
     top: -60px;
-    width: 100%;
-    height: 150%;
     filter: brightness(65%) blur(1px); }
   main .quienesSomos .parallaxQuienesSomos .content-wrapper {
     display: flex;
@@ -270,12 +268,12 @@ main .integrantes .parallaxIntegrantes {
   main .integrantes .parallaxIntegrantes .bcg2 {
     background: url("../img/foto.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
     top: -20px;
     width: 100%;
-    height: 130%;
+    height: 135%;
     filter: brightness(65%) blur(1px); }
   main .integrantes .parallaxIntegrantes .content-wrapper {
     display: flex;
@@ -360,11 +358,11 @@ main .shows .parallaxShows {
   main .shows .parallaxShows .bcg3 {
     background: url("../img/foto3.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     position: absolute;
     top: 0;
     width: 100%;
-    height: 150%;
+    height: 135%;
     filter: brightness(65%) blur(1px); }
   main .shows .parallaxShows .content-wrapper {
     display: flex;
@@ -394,7 +392,7 @@ main .contacto .parallaxContacto {
   position: relative;
   overflow: hidden;
   padding: 150px 0;
-  height: 60vh;
+  height: 30vh;
   color: var(--titulos);
   background-color: #000; }
   main .contacto .parallaxContacto .bcg4 {
@@ -402,9 +400,9 @@ main .contacto .parallaxContacto {
     background-position: center;
     background-size: cover;
     position: absolute;
-    top: -30px;
+    top: 0px;
     width: 100%;
-    height: 150%;
+    height: 125%;
     filter: brightness(65%) blur(1px); }
   main .contacto .parallaxContacto .content-wrapper {
     display: flex;
@@ -455,7 +453,7 @@ main .contacto .contacto__descripcion {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-color: black; }
     .header .header__image {
       width: 100%;
@@ -510,10 +508,13 @@ main .contacto .contacto__descripcion {
       grid-area: texto;
       justify-self: center; }
   main .quienesSomos .parallaxQuienesSomos {
-    height: 30vh; }
+    height: 15vh; }
     main .quienesSomos .parallaxQuienesSomos .bcg1 {
+      background: url("../img/foto2Celu.jpg");
+      background-size: 100% 100%;
+      background-position: center;
       width: 100%;
-      height: 140%; }
+      height: 145%; }
     main .quienesSomos .parallaxQuienesSomos .content-wrapper {
       display: flex;
       align-items: center;

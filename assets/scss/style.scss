@@ -121,11 +121,10 @@ main {
       .bcg1 {
         background: url("../img/foto2.jpg");
         background-position: center;
-        background-size: contain;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         position: absolute;
         top: -60px;
-        @include sizes (100%, 150%);
         @include filtro;
       }
       .content-wrapper {
@@ -174,11 +173,11 @@ main {
       .bcg2 {
         background: url("../img/foto.jpg");
         background-position: center;
-        background-size: contain;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         position: absolute;
         top: -20px;
-        @include sizes (100%, 130%);
+        @include sizes (100%, 135%);
         @include filtro;
       }
       .content-wrapper {
@@ -274,10 +273,10 @@ main {
       .bcg3 {
         background: url("../img/foto3.jpg");
         background-position: center;
-        background-size: cover;
+        background-size: 100% 100%;
         position: absolute;
         top: 0;
-        @include sizes(100%, 150%);
+        @include sizes(100%, 135%);
         @include filtro;
       }
       .content-wrapper {
@@ -310,7 +309,7 @@ main {
       position: relative;
       overflow: hidden;
       padding: 150px 0;
-      height: 60vh;
+      height: 30vh;
       color: var(--titulos);
       background-color: #000;
       .bcg4 {
@@ -318,8 +317,8 @@ main {
         background-position: center;
         background-size: cover;
         position: absolute;
-        top: -30px;
-        @include sizes(100%, 150%);
+        top: 0px;
+        @include sizes(100%, 125%);
         @include filtro;
       }
       .content-wrapper {
@@ -379,7 +378,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    @include sizes(100%, 100vh);
+    @include sizes(100%, 50vh);
     background-color: black;
     .header__image {
       @include sizes(100%, auto);
@@ -445,9 +444,13 @@ main {
   main {
     .quienesSomos {
       .parallaxQuienesSomos {
-        height: 30vh;
+        height: 15vh;
         .bcg1{
-          @include sizes(100%, 140%);
+          background: url("../img/foto2Celu.jpg");
+          background-size: 100% 100%;
+          background-position: center;
+          @include sizes (100%, 145%);
+
         }
         .content-wrapper {
           display: flex;

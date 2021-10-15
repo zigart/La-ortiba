@@ -64,7 +64,7 @@ $(document).ready(function() {
 
         function scrollParallax(bcg){
             let scrollBcg = bcg.getBoundingClientRect().top - window.innerHeight;
-            bcg.style.transform = "translateY("+  scrollBcg * 0.1+ "px)";
+            bcg.style.transform = "translateY("+  scrollBcg * 0.15+ "px)";
             console.log(scrollBcg);
         }
 

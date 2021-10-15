@@ -119,12 +119,13 @@ main {
       color: var(--titulos);
       background-color: #000;
       .bcg1 {
-        background: url("../img/foto.jpg");
+        background: url("../img/foto2.jpg");
         background-position: center;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         position: absolute;
-        top: 0;
-        
+        top: -60px;
+        @include sizes (100%, 150%);
         @include filtro;
       }
       .content-wrapper {
@@ -171,12 +172,13 @@ main {
       color: var(--titulos);
       background-color: #000;
       .bcg2 {
-        background: url("../img/foto2.jpg");
+        background: url("../img/foto.jpg");
         background-position: center;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         position: absolute;
-        top: 0;
-        @include sizes(100%, 150%);
+        top: -20px;
+        @include sizes (100%, 130%);
         @include filtro;
       }
       .content-wrapper {
@@ -270,7 +272,7 @@ main {
       color: var(--titulos);
       background-color: #000;
       .bcg3 {
-        background: url("../img/foto.jpg");
+        background: url("../img/foto3.jpg");
         background-position: center;
         background-size: cover;
         position: absolute;
@@ -316,7 +318,7 @@ main {
         background-position: center;
         background-size: cover;
         position: absolute;
-        top: 0;
+        top: -30px;
         @include sizes(100%, 150%);
         @include filtro;
       }
@@ -607,9 +609,3 @@ main {
     }
   }
 }
-
-
-
-// Responsive
-
-

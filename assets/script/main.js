@@ -82,11 +82,11 @@ $(document).ready(function() {
                 scrollParallax(bcg4);
             }
         }
-        //Botones de leer mas
-        menu();
     }
     
     
+    menu();
+    //Botones de leer mas
     const leerMasFullScreen = document.querySelector(".leerMasFullScreen");
     const opacidad = document.querySelector(".opacidad");
     const btnAriana = document.querySelector("#ariana");

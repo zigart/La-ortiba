@@ -497,11 +497,10 @@ main .contacto .contacto__descripcion {
       display: flex;
       overflow: hidden;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: flex-start;
       align-items: center;
-      border-radius: 20px;
       z-index: 100;
-      width: 95vw;
+      width: 100vw;
       height: 100vh;
       position: fixed;
       background-color: wheat; }

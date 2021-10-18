@@ -52,85 +52,6 @@
     --bordo:  #3a090a;
     --titulos: #fff5e3; } }
 
-@keyframes menuDespliegue {
-  0% {
-    height: 0; }
-  100% {
-    height: 100vh; } }
-
-@keyframes menuRepliegue {
-  0% {
-    height: 100vh; }
-  100% {
-    height: 0vh; } }
-
-@media (min-width: 0) {
-  .header {
-    height: 100vh; }
-  .quienesSomos .parallaxQuienesSomos {
-    width: 100%;
-    height: 100%; }
-    .quienesSomos .parallaxQuienesSomos .bcg1 {
-      width: 100%;
-      height: 100%; }
-  .card {
-    min-height: 680px; } }
-
-@media (min-width: 321px) {
-  .quienesSomos .parallaxQuienesSomos .bcg1 {
-    background-size: 100vw 100%; }
-  .card {
-    min-height: 680px; } }
-
-@media (min-width: 426px) {
-  .quienesSomos .parallaxQuienesSomos .bcg1 {
-    width: 100%;
-    height: 150%; }
-  .header {
-    height: 500px; }
-  .integrantes__descripcion {
-    min-height: auto; }
-    .integrantes__descripcion .card {
-      width: 75% !important;
-      min-height: 500px; } }
-
-@media (min-width: 768px) {
-  .header {
-    height: 100vh; }
-  .quienesSomos .parallaxQuienesSomos .bcg1 {
-    width: 100%;
-    height: 150%; }
-  .integrantes .integrantes__descripcion {
-    min-height: 1000px; }
-  .contacto .content-wrapper h4 {
-    font-size: 80px; } }
-
-@media (min-width: 1024px) {
-  .quienesSomos .parallaxQuienesSomos .bcg1 {
-    width: 100%;
-    height: 150%; } }
-
-@media (prefers-color-scheme: no-prefer) {
-  :root {
-    --menu: #b7a735;
-    --wheat: wheat;
-    --bordo: #3a090a;
-    --titulos: #fff3dc; } }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --menu: #b7a735;
-    --wheat: wheat;
-    --bordo: #3a090a;
-    --titulos: #fff3dc; } }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --menu: #b7a735;
-    --wheat: wheat;
-    --bordo:  #3a090a;
-    --titulos: #fff5e3; } }
-
 * {
   margin: 0;
   padding: 0; }
@@ -224,7 +145,7 @@ main .quienesSomos .parallaxQuienesSomos {
     background-repeat: no-repeat;
     position: absolute;
     top: -60px;
-    filter: brightness(65%) blur(1px); }
+    filter: brightness(65%) blur(2px); }
   main .quienesSomos .parallaxQuienesSomos .content-wrapper {
     display: flex;
     align-items: center;
@@ -274,7 +195,7 @@ main .integrantes .parallaxIntegrantes {
     top: -20px;
     width: 100%;
     height: 135%;
-    filter: brightness(65%) blur(1px); }
+    filter: brightness(65%) blur(2px); }
   main .integrantes .parallaxIntegrantes .content-wrapper {
     display: flex;
     align-items: center;
@@ -363,7 +284,7 @@ main .shows .parallaxShows {
     top: 0;
     width: 100%;
     height: 135%;
-    filter: brightness(65%) blur(1px); }
+    filter: brightness(65%) blur(2px); }
   main .shows .parallaxShows .content-wrapper {
     display: flex;
     align-items: center;
@@ -403,7 +324,7 @@ main .contacto .parallaxContacto {
     top: 0px;
     width: 100%;
     height: 125%;
-    filter: brightness(65%) blur(1px); }
+    filter: brightness(65%) blur(2px); }
   main .contacto .parallaxContacto .content-wrapper {
     display: flex;
     align-items: center;
@@ -508,13 +429,15 @@ main .contacto .contacto__descripcion {
       grid-area: texto;
       justify-self: center; }
   main .quienesSomos .parallaxQuienesSomos {
-    height: 15vh; }
+    height: 50vh;
+    padding: 0; }
     main .quienesSomos .parallaxQuienesSomos .bcg1 {
-      background: url("../img/foto2Celu.jpg");
-      background-size: 100% 100%;
-      background-position: center;
       width: 100%;
-      height: 145%; }
+      height: 100%;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0; }
     main .quienesSomos .parallaxQuienesSomos .content-wrapper {
       display: flex;
       align-items: center;
@@ -530,14 +453,18 @@ main .contacto .contacto__descripcion {
         text-align: center;
         font-size: 40px; }
   main .quienesSomos .quienesSomos__descripcion {
+    height: 50vh;
     line-height: 30px;
     padding: 10px;
     font-size: 20px; }
   main .integrantes .parallaxIntegrantes {
-    height: 30vh; }
+    max-height: 50vh;
+    padding: 0px; }
     main .integrantes .parallaxIntegrantes .bcg2 {
-      width: 100%;
-      height: 140%; }
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0; }
     main .integrantes .parallaxIntegrantes .content-wrapper {
       display: flex;
       align-items: center;
@@ -553,7 +480,45 @@ main .contacto .contacto__descripcion {
         font-size: 40px; }
   main .integrantes .integrantes__descripcion {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    min-height: 50vh; }
+    main .integrantes .integrantes__descripcion .opacidad {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.514); }
+    main .integrantes .integrantes__descripcion .leerMasFullScreen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      z-index: 100;
+      width: 95vw;
+      height: 100vh;
+      position: fixed;
+      background-color: wheat; }
+      main .integrantes .integrantes__descripcion .leerMasFullScreen .nombre {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 800; }
+      main .integrantes .integrantes__descripcion .leerMasFullScreen img {
+        width: 100px;
+        height: 100px;
+        margin: 40px 0;
+        border-radius: 100%; }
+      main .integrantes .integrantes__descripcion .leerMasFullScreen .descripcion {
+        text-align: center;
+        font-family: "Cairo", sans-serif;
+        font-size: 15px;
+        line-height: 15px;
+        padding: 5px; }
     main .integrantes .integrantes__descripcion .owl-carousel {
       width: 90%; }
     main .integrantes .integrantes__descripcion .owl-item {
@@ -561,10 +526,17 @@ main .contacto .contacto__descripcion {
       justify-content: center; }
     main .integrantes .integrantes__descripcion .card {
       width: 100%;
-      min-height: 500px;
+      min-height: 0;
+      max-height: 600px;
       padding: 20px;
       margin-top: 20px;
       margin-bottom: 20px; }
+      main .integrantes .integrantes__descripcion .card button {
+        width: 100px;
+        height: 50px;
+        border: 2px solid var(--bordo);
+        border-radius: 20px;
+        background-color: #fcd999; }
       main .integrantes .integrantes__descripcion .card img {
         width: 150px;
         height: 150px;
@@ -575,9 +547,7 @@ main .contacto .contacto__descripcion {
         font-size: 25px;
         font-weight: 800; }
       main .integrantes .integrantes__descripcion .card .descripcion {
-        text-align: center;
-        font-size: 15px;
-        line-height: 20px; }
+        display: none; }
     main .integrantes .integrantes__descripcion .customPrevBtn,
     main .integrantes .integrantes__descripcion .customNextBtn {
       display: none; }

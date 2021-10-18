@@ -53,6 +53,7 @@ $(document).ready(function() {
         })
     }
 
+    if(window.screen.width >= 768){
         function react(image){
             let getYposition = image.getBoundingClientRect().y;
             return getYposition - window.innerHeight;
@@ -81,8 +82,26 @@ $(document).ready(function() {
                 scrollParallax(bcg4);
             }
         }
+        //Botones de leer mas
         menu();
-
+    }
+    
+    
+    const leerMasFullScreen = document.querySelector(".leerMasFullScreen");
+    const opacidad = document.querySelector(".opacidad");
+    const btnAriana = document.querySelector("#ariana");
+    btnAriana.addEventListener('click', function(){
+        leerMasFullScreen.innerHTML = `
+        <p class="nombre">Ariana Zigart</p>
+        <img src="assets/img/ariana.jpg" alt="">
+                        <p class="descripcion">Ariana Zigart nació el 29 de junio del 2000 en Buenos Aires, Argentina. A los 6 años ingresó a un coro de niños dirigido por la Prof. Gladys Obertello y a la edad de 9 años comenzó a estudiar acordeón a piano. A los 13 años, ingresó al Conservatorio de Música “A. L. Schiuma” en donde estudia piano con la Prof. Graciela Burgos. 
+                            Ha participado de diversas masterclass con profesores internacionales y locales (Bernardino Beggio, Joana Holando, Daniel Goldstein, Diana Lopszyc, Natalia Gonzalez Figueroa, José Luis Juri, Pablo Vucetich, entre otros) y tuvo la oportunidad de tocar en conciertos, tanto solista, con conjuntos de cámara o como pianista acompañante, en diversos auditorios.
+                            Actualmente, se encuentra terminando el profesorado de Piano e incursionando en el mundo del tango con La Ortiba.</p>
+                    
+        `;
+        opacidad.style.display = "flex";
+        console.log("se pulso"); 
+    });
 
     //Propiedades del carrousel de descripciones
     var owl = $('.owl-carousel');

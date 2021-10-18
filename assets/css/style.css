@@ -488,19 +488,8 @@ main .contacto .contacto__descripcion {
     display: flex;
     justify-content: space-around;
     min-height: 50vh; }
-    main .integrantes .integrantes__descripcion .opacidad {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-      width: 100vw;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.514); }
     main .integrantes .integrantes__descripcion .leerMasFullScreen {
-      display: flex;
+      display: none;
       overflow: hidden;
       flex-direction: column;
       justify-content: flex-start;
@@ -509,7 +498,8 @@ main .contacto .contacto__descripcion {
       width: 100vw;
       height: 100vh;
       position: fixed;
-      background-color: wheat; }
+      background-color: wheat;
+      top: 0; }
       main .integrantes .integrantes__descripcion .leerMasFullScreen .cerrar {
         align-self: flex-end;
         margin-right: 20px;

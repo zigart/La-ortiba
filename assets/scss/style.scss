@@ -512,20 +512,8 @@ main {
         display: flex;
         justify-content: space-around;
         min-height: 50vh;
-        .opacidad{
-          display: none;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          z-index: 100;
-          width: 100vw;
-          height: 100vh;
-          position: fixed;
-          top: 0;
-          background-color: rgba(0, 0, 0, 0.514);
-        }
         .leerMasFullScreen{
-          display: flex;
+          display: none;
           overflow: hidden;
           flex-direction: column;
           justify-content: flex-start;
@@ -535,6 +523,7 @@ main {
           height: 100vh;
           position: fixed;
           background-color: wheat;
+          top: 0;
           .cerrar{
             align-self: flex-end;
             margin-right: 20px;

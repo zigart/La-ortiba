@@ -98,7 +98,6 @@ $(document).ready(function() {
         <p class="descripcion">Ariana Zigart nació el 29 de junio del 2000 en Buenos Aires, Argentina. A los 6 años ingresó a un coro de niños dirigido por la Prof. Gladys Obertello y a la edad de 9 años comenzó a estudiar acordeón a piano. A los 13 años, ingresó al Conservatorio de Música “A. L. Schiuma” en donde estudia piano con la Prof. Graciela Burgos. 
         Ha participado de diversas masterclass con profesores internacionales y locales (Bernardino Beggio, Joana Holando, Daniel Goldstein, Diana Lopszyc, Natalia Gonzalez Figueroa, José Luis Juri, Pablo Vucetich, entre otros) y tuvo la oportunidad de tocar en conciertos, tanto solista, con conjuntos de cámara o como pianista acompañante, en diversos auditorios.
         Actualmente, se encuentra terminando el profesorado de Piano e incursionando en el mundo del tango con La Ortiba.</p>`;
-        console.log(leerMasFullScreen);
         opacidad.style.display = "flex";
         document.querySelector('.cerrar').addEventListener('click', function(){
             opacidad.style.display = "none";
@@ -115,13 +114,30 @@ $(document).ready(function() {
         <img src="assets/img/gabo.jpg" alt="">
         <p class="descripcion">Gabriel Iván Lamberghini Serafini nació el 23 de octubre de 1998 en Buenos Aires, Argentina. A la edad de 11 años tuvo su primer contacto con la musica tomando clases de guitarra con Juan Hermelo. Al pasar los años fue formando diferentes grupos de Rock y Funk con sus compañeros del colegio. Al finalizar el secundario se produzco una ruptura en su vida el cual lo llevo a realizarse diferentes preguntas de introspección, en consecuencia esto lo llevo a estudiar un nuevo instrumento que fue el bandoneón. Completamente fascinado con este instrumento comenzó a estudiar con Carlos Viggiano, posteriormente musicalizar obras de teatro e ingresar a diferentes orquestas (La de Angelis Tango Club y Orquesta Tipica No Docente). Actualmente se encuentra realizando sus estudios con Horacio Romo y participando del grupo de tango La Ortiba.</p>               
         `;
-        console.log(leerMasFullScreen);
         opacidad.style.display = "flex";
         document.querySelector('.cerrar').addEventListener('click', function(){
             opacidad.style.display = "none";
             leerMasFullScreen.innerHTML = "";
         });
     });
+
+    const btnKaren = document.querySelector("#karen");
+    btnKaren.addEventListener('click', function(){
+        leerMasFullScreen.innerHTML = `
+        <button class="cerrar">X</button>
+        <p class="nombre">Karen Selva</p>
+        <img src="assets/img/karen.jpg" alt="">
+        <p class="descripcion" >Karen Selva nació el 03 de Marzo de 1997 en Buenos Aires, Argentina. A la edad de 8 años tuvo su primer contacto con la música tomando clases de canto y coro con la profesora Marina Prá. Al pasar los años se adentró más en el mundo
+        de la música, quedando fascinada por un instrumento, el violín, el cual comenzó a estudiar a los 13 años con el profesor Ernesto Picerno. Ella participó en diferentes conciertos y ensambles a medida que crecía musicalmente
+        (coro Alluí, orquesta Cambalache, ensamble Trifoglio, entre otros). En el año 2013 comenzó sus estudios en el conservatorio de música Alfredo Luís Schiuma de San Martín. Actualmente se encuentra realizando el Profesorado de
+        Violín en dicha institución con la profesora Carolina Chiappe y participando del grupo de tango La Ortiba.</p>`;
+        opacidad.style.display = "flex";
+        document.querySelector('.cerrar').addEventListener('click', function(){
+            opacidad.style.display = "none";
+            leerMasFullScreen.innerHTML = "";
+        });
+    });
+
 
 
 

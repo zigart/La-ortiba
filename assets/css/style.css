@@ -509,8 +509,7 @@ main .contacto .contacto__descripcion {
         font-size: 25px;
         font-weight: 800; }
       main .integrantes .integrantes__descripcion .leerMasFullScreen img {
-        width: 100px;
-        height: 100px;
+        width: 50%;
         margin: 40px 0;
         border-radius: 100%; }
       main .integrantes .integrantes__descripcion .leerMasFullScreen .descripcion {

@@ -520,6 +520,7 @@ main {
         }
         .leerMasFullScreen{
           display: flex;
+          overflow: hidden;
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
@@ -529,6 +530,17 @@ main {
           height: 100vh;
           position: fixed;
           background-color: wheat;
+          .cerrar{
+            align-self: flex-end;
+            margin-right: 20px;
+            margin-top: 20px;
+            width: 30px;
+            height: 30px;
+            border-radius: 100px;
+            background-color: var(--bordo);
+            color: wheat;
+            border: none;
+          }
           .nombre {
             text-align: center;
             font-size: 25px;

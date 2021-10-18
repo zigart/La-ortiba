@@ -92,6 +92,7 @@ $(document).ready(function() {
     const btnAriana = document.querySelector("#ariana");
     btnAriana.addEventListener('click', function(){
         leerMasFullScreen.innerHTML = `
+        <button class="cerrar">X</button>
         <p class="nombre">Ariana Zigart</p>
         <img src="assets/img/ariana.jpg" alt="">
                         <p class="descripcion">Ariana Zigart nació el 29 de junio del 2000 en Buenos Aires, Argentina. A los 6 años ingresó a un coro de niños dirigido por la Prof. Gladys Obertello y a la edad de 9 años comenzó a estudiar acordeón a piano. A los 13 años, ingresó al Conservatorio de Música “A. L. Schiuma” en donde estudia piano con la Prof. Graciela Burgos. 
@@ -100,8 +101,11 @@ $(document).ready(function() {
                     
         `;
         opacidad.style.display = "flex";
-        console.log("se pulso"); 
+        document.querySelector('.cerrar').addEventListener('click', function(){
+            opacidad.style.display = "none";
+        })
     });
+
 
     //Propiedades del carrousel de descripciones
     var owl = $('.owl-carousel');

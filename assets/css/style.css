@@ -495,6 +495,7 @@ main .contacto .contacto__descripcion {
       background-color: rgba(0, 0, 0, 0.514); }
     main .integrantes .integrantes__descripcion .leerMasFullScreen {
       display: flex;
+      overflow: hidden;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
@@ -504,6 +505,16 @@ main .contacto .contacto__descripcion {
       height: 100vh;
       position: fixed;
       background-color: wheat; }
+      main .integrantes .integrantes__descripcion .leerMasFullScreen .cerrar {
+        align-self: flex-end;
+        margin-right: 20px;
+        margin-top: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        background-color: var(--bordo);
+        color: wheat;
+        border: none; }
       main .integrantes .integrantes__descripcion .leerMasFullScreen .nombre {
         text-align: center;
         font-size: 25px;

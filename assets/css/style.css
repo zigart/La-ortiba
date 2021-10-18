@@ -496,7 +496,7 @@ main .contacto .contacto__descripcion {
     main .integrantes .integrantes__descripcion .leerMasFullScreen {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       border-radius: 20px;
       z-index: 100;

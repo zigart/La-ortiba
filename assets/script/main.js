@@ -97,12 +97,12 @@ $(document).ready(function() {
         <img src="assets/img/ariana.jpg" alt="">
         <p class="descripcion">Ariana Zigart nació el 29 de junio del 2000 en Buenos Aires, Argentina. A los 6 años ingresó a un coro de niños dirigido por la Prof. Gladys Obertello y a la edad de 9 años comenzó a estudiar acordeón a piano. A los 13 años, ingresó al Conservatorio de Música “A. L. Schiuma” en donde estudia piano con la Prof. Graciela Burgos. 
         Ha participado de diversas masterclass con profesores internacionales y locales (Bernardino Beggio, Joana Holando, Daniel Goldstein, Diana Lopszyc, Natalia Gonzalez Figueroa, José Luis Juri, Pablo Vucetich, entre otros) y tuvo la oportunidad de tocar en conciertos, tanto solista, con conjuntos de cámara o como pianista acompañante, en diversos auditorios.
-        Actualmente, se encuentra terminando el profesorado de Piano e incursionando en el mundo del tango con La Ortiba.</p>
-                    
-        `;
+        Actualmente, se encuentra terminando el profesorado de Piano e incursionando en el mundo del tango con La Ortiba.</p>`;
+        console.log(leerMasFullScreen);
         opacidad.style.display = "flex";
         document.querySelector('.cerrar').addEventListener('click', function(){
             opacidad.style.display = "none";
+            leerMasFullScreen.innerHTML = "";
         });
     });
 
@@ -115,9 +115,11 @@ $(document).ready(function() {
         <img src="assets/img/gabo.jpg" alt="">
         <p class="descripcion">Gabriel Iván Lamberghini Serafini nació el 23 de octubre de 1998 en Buenos Aires, Argentina. A la edad de 11 años tuvo su primer contacto con la musica tomando clases de guitarra con Juan Hermelo. Al pasar los años fue formando diferentes grupos de Rock y Funk con sus compañeros del colegio. Al finalizar el secundario se produzco una ruptura en su vida el cual lo llevo a realizarse diferentes preguntas de introspección, en consecuencia esto lo llevo a estudiar un nuevo instrumento que fue el bandoneón. Completamente fascinado con este instrumento comenzó a estudiar con Carlos Viggiano, posteriormente musicalizar obras de teatro e ingresar a diferentes orquestas (La de Angelis Tango Club y Orquesta Tipica No Docente). Actualmente se encuentra realizando sus estudios con Horacio Romo y participando del grupo de tango La Ortiba.</p>               
         `;
+        console.log(leerMasFullScreen);
         opacidad.style.display = "flex";
         document.querySelector('.cerrar').addEventListener('click', function(){
             opacidad.style.display = "none";
+            leerMasFullScreen.innerHTML = "";
         });
     });
 

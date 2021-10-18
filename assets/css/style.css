@@ -144,7 +144,9 @@ main .quienesSomos .parallaxQuienesSomos {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: -60px;
+    top: 10px;
+    width: 100%;
+    height: 120%;
     filter: brightness(65%) blur(2px); }
   main .quienesSomos .parallaxQuienesSomos .content-wrapper {
     display: flex;
@@ -214,6 +216,7 @@ main .integrantes .integrantes__descripcion {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 120vh;
   border-top: 4px double var(--wheat);
   border-bottom: 4px double var(--wheat);
   background-color: var(--bordo); }
@@ -233,6 +236,8 @@ main .integrantes .integrantes__descripcion {
     width: 85%;
     min-height: 680px;
     background-color: var(--wheat); }
+    main .integrantes .integrantes__descripcion .card .leerMas {
+      display: none; }
     main .integrantes .integrantes__descripcion .card img {
       width: 200px;
       height: 200px;
@@ -336,7 +341,8 @@ main .contacto .parallaxContacto {
     main .contacto .parallaxContacto .content-wrapper h4 {
       display: flex;
       align-self: center;
-      justify-self: center; }
+      justify-self: center;
+      font-size: 80px; }
 
 main .contacto .contacto__descripcion {
   display: flex;
@@ -540,6 +546,8 @@ main .contacto .contacto__descripcion {
       padding: 20px;
       margin-top: 20px;
       margin-bottom: 20px; }
+      main .integrantes .integrantes__descripcion .card .leerMas {
+        display: block; }
       main .integrantes .integrantes__descripcion .card button {
         width: 100px;
         height: 50px;

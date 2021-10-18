@@ -1,11 +1,8 @@
 $(document).ready(function() {
 
-    var anchoVentana = $(window).width();
-
-
     function menu() {
-        var menuToggle = $(".menuToggle");
-        var checkbox = $("#check");
+        let menuToggle = $(".menuToggle");
+        let checkbox = $("#check");
 
 
 
@@ -84,8 +81,8 @@ $(document).ready(function() {
         }
     }
     
-    
     menu();
+
     //Botones de leer mas
     const leerMasFullScreen = document.querySelector(".leerMasFullScreen");
     const btnAriana = document.querySelector("#ariana");

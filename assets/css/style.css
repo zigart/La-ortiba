@@ -597,31 +597,23 @@ main .contacto .contacto__descripcion {
     border-top: 4px double var(--wheat);
     border-bottom: 4px double var(--wheat);
     background-color: var(--bordo); }
-  .contacto {
-    overflow: hidden; }
-    .contacto .parallaxContacto {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-      height: 30vh;
-      padding: 150px 0;
-      color: var(--titulos);
-      background-color: #000; }
-      .contacto .parallaxContacto .bcg4 {
-        width: 100%;
-        height: 140%; }
-      .contacto .parallaxContacto .content-wrapper h4 {
-        font-size: 50px; }
-  .contacto__descripcion {
-    display: flex;
+  main .contacto .parallaxContacto {
+    height: 50vh;
+    padding: 0; }
+    main .contacto .parallaxContacto .bcg4 {
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 0; }
+    main .contacto .parallaxContacto .content-wrapper h4 {
+      font-size: 50px; }
+  main .contacto .contacto__descripcion {
     flex-direction: column;
     justify-content: space-around;
-    height: 400px !important; }
-    .contacto__descripcion a span {
+    height: 400px; }
+    main .contacto .contacto__descripcion a span {
       margin-left: 10px; }
-    .contacto__descripcion a img {
-      width: 20px;
-      height: 20px;
+    main .contacto .contacto__descripcion a img {
+      width: 40px;
+      height: 40px;
       margin-left: 15px; } }

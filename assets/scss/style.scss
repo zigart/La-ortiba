@@ -642,41 +642,35 @@ main {
         background-color: var(--bordo);
       }
     }
-  }
-  .contacto {
-    overflow: hidden;
-    .parallaxContacto {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-      height: 30vh;
-      padding: 150px 0;
-      color: var(--titulos);
-      background-color: #000;
-      .bcg4{
-        @include sizes(100%, 140%);
-      }
-      .content-wrapper {
-        h4 {
-          font-size: 50px;
+    .contacto {
+      .parallaxContacto {
+        height: 50vh;
+        padding: 0;
+        .bcg4{
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 0;
+        }
+        .content-wrapper {
+          h4 {
+            font-size: 50px;
+          }
         }
       }
-    }
-  }
-  .contacto__descripcion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 400px !important;
-    a {
-      span {
-        margin-left: 10px;
-      }
-      img {
-        @include sizes(20px, 20px);
-        margin-left: 15px;
+      .contacto__descripcion {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 400px;
+        a {
+          span {
+            margin-left: 10px;
+          }
+          img {
+            @include sizes(40px, 40px);
+            margin-left: 15px;
+          }
+        }
       }
     }
   }

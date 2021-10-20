@@ -616,9 +616,13 @@ main {
     }
     .shows {
       .parallaxShows {
-        height: 30vh;
+        height: 50vh;
+        padding: 0;
         .bcg3{
-          @include sizes(100%, 140%);
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          top: 0;
         }
         .content-wrapper {
           display: flex;

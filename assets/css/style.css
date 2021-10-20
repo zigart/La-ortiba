@@ -499,6 +499,7 @@ main .contacto .contacto__descripcion {
       height: 100vh;
       position: fixed;
       background-color: wheat;
+      overflow-y: scroll;
       top: 0; }
       main .integrantes .integrantes__descripcion .leerMasFullScreen .cerrar {
         align-self: flex-end;

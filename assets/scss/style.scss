@@ -523,6 +523,7 @@ main {
           height: 100vh;
           position: fixed;
           background-color: wheat;
+          overflow-y: scroll;
           top: 0;
           .cerrar{
             align-self: flex-end;

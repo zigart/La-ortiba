@@ -144,8 +144,8 @@ main .quienesSomos .parallaxQuienesSomos {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: absolute;
-    top: 10px;
-    width: 100%;
+    top: 0px;
+    width: 120%;
     height: 120%;
     filter: brightness(65%) blur(2px); }
   main .quienesSomos .parallaxQuienesSomos .content-wrapper {
